@@ -17,10 +17,9 @@ The script "predict-distances.py" can be used to write distance matrix (map) fil
 mkdir predictions
 python predict-distances.py
 ```
-This will write '*.rr' files. These predictions should be in the format similar to the files in 'my-rr-predictions.tar.gz'
-
+This will write '*.rr' files. 
 ### Step 2: Verify that you have native structures & secondary structure files
-Download and unzip 'ss.tar.gz' and 'pdb.tar.gz'.
+Download and check 'ss' and 'pdb'.
 
 ### Step 3: Download DISTFOLD
 [DISTFOLD](https://github.com/badriadhikari/DISTFOLD) is an extremely fast tool to build 3D models. Follow the instructions to download and test it.
