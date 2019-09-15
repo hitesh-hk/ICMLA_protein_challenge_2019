@@ -1,0 +1,2 @@
+assign (resid 101 and name O) (resid 105 and name H) 2.12 0.20 0.10 !helix
+assign (resid 102 and name O) (resid 106 and name H) 2.12 0.20 0.10 !helix

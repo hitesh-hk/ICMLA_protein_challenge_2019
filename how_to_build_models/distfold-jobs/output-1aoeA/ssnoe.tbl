@@ -1,0 +1,250 @@
+assign (resid  30 and name  C) (resid  35 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  30 and name  C) (resid  33 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  30 and name  C) (resid  34 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  30 and name CA) (resid  35 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  30 and name CA) (resid  33 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  30 and name CA) (resid  34 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  30 and name  N) (resid  35 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  30 and name  N) (resid  33 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  30 and name  N) (resid  34 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  30 and name  O) (resid  35 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  30 and name  O) (resid  33 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  30 and name  O) (resid  34 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  31 and name  C) (resid  36 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  31 and name  C) (resid  34 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  31 and name  C) (resid  35 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  31 and name CA) (resid  36 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  31 and name CA) (resid  34 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  31 and name CA) (resid  35 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  31 and name  N) (resid  36 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  31 and name  N) (resid  34 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  31 and name  N) (resid  35 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  31 and name  O) (resid  36 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  31 and name  O) (resid  34 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  31 and name  O) (resid  35 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  32 and name  C) (resid  37 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  32 and name  C) (resid  35 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  32 and name  C) (resid  36 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  32 and name CA) (resid  37 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  32 and name CA) (resid  35 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  32 and name CA) (resid  36 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  32 and name  N) (resid  37 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  32 and name  N) (resid  35 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  32 and name  N) (resid  36 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  32 and name  O) (resid  37 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  32 and name  O) (resid  35 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  32 and name  O) (resid  36 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  33 and name  C) (resid  38 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  33 and name  C) (resid  36 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  33 and name  C) (resid  37 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  33 and name CA) (resid  38 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  33 and name CA) (resid  36 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  33 and name CA) (resid  37 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  33 and name  N) (resid  38 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  33 and name  N) (resid  36 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  33 and name  N) (resid  37 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  33 and name  O) (resid  38 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  33 and name  O) (resid  36 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  33 and name  O) (resid  37 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  34 and name  C) (resid  39 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  34 and name  C) (resid  37 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  34 and name  C) (resid  38 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  34 and name CA) (resid  39 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  34 and name CA) (resid  37 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  34 and name CA) (resid  38 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  34 and name  N) (resid  39 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  34 and name  N) (resid  37 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  34 and name  N) (resid  38 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  34 and name  O) (resid  39 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  34 and name  O) (resid  37 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  34 and name  O) (resid  38 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  35 and name  C) (resid  40 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  35 and name  C) (resid  38 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  35 and name  C) (resid  39 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  35 and name CA) (resid  40 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  35 and name CA) (resid  38 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  35 and name CA) (resid  39 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  35 and name  N) (resid  40 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  35 and name  N) (resid  38 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  35 and name  N) (resid  39 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  35 and name  O) (resid  40 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  35 and name  O) (resid  38 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  35 and name  O) (resid  39 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  36 and name  C) (resid  41 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  36 and name  C) (resid  39 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  36 and name  C) (resid  40 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  36 and name CA) (resid  41 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  36 and name CA) (resid  39 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  36 and name CA) (resid  40 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  36 and name  N) (resid  41 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  36 and name  N) (resid  39 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  36 and name  N) (resid  40 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  36 and name  O) (resid  41 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  36 and name  O) (resid  39 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  36 and name  O) (resid  40 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  37 and name  C) (resid  40 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  37 and name  C) (resid  41 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  37 and name CA) (resid  40 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  37 and name CA) (resid  41 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  37 and name  N) (resid  40 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  37 and name  N) (resid  41 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  37 and name  O) (resid  40 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  37 and name  O) (resid  41 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  56 and name  C) (resid  61 and name  C) 8.27 0.20 0.10 !helix
+assign (resid  56 and name  C) (resid  59 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  56 and name  C) (resid  60 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  56 and name CA) (resid  61 and name CA) 8.73 0.20 0.10 !helix
+assign (resid  56 and name CA) (resid  59 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  56 and name CA) (resid  60 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  56 and name  N) (resid  61 and name  N) 8.18 0.20 0.10 !helix
+assign (resid  56 and name  N) (resid  59 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  56 and name  N) (resid  60 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  56 and name  O) (resid  61 and name  O) 8.50 0.20 0.10 !helix
+assign (resid  56 and name  O) (resid  59 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  56 and name  O) (resid  60 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  57 and name  C) (resid  60 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  57 and name  C) (resid  61 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  57 and name CA) (resid  60 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  57 and name CA) (resid  61 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  57 and name  N) (resid  60 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  57 and name  N) (resid  61 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  57 and name  O) (resid  60 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  57 and name  O) (resid  61 and name  O) 6.22 0.20 0.10 !helix
+assign (resid  96 and name  C) (resid  99 and name  C) 5.01 0.20 0.10 !helix
+assign (resid  96 and name  C) (resid 100 and name  C) 6.20 0.20 0.10 !helix
+assign (resid  96 and name CA) (resid  99 and name CA) 5.25 0.20 0.10 !helix
+assign (resid  96 and name CA) (resid 100 and name CA) 6.27 0.20 0.10 !helix
+assign (resid  96 and name  N) (resid  99 and name  N) 4.96 0.20 0.10 !helix
+assign (resid  96 and name  N) (resid 100 and name  N) 6.23 0.20 0.10 !helix
+assign (resid  96 and name  O) (resid  99 and name  O) 5.13 0.20 0.10 !helix
+assign (resid  96 and name  O) (resid 100 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 115 and name  C) (resid 120 and name  C) 8.27 0.20 0.10 !helix
+assign (resid 115 and name  C) (resid 118 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 115 and name  C) (resid 119 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 115 and name CA) (resid 120 and name CA) 8.73 0.20 0.10 !helix
+assign (resid 115 and name CA) (resid 118 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 115 and name CA) (resid 119 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 115 and name  N) (resid 120 and name  N) 8.18 0.20 0.10 !helix
+assign (resid 115 and name  N) (resid 118 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 115 and name  N) (resid 119 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 115 and name  O) (resid 120 and name  O) 8.50 0.20 0.10 !helix
+assign (resid 115 and name  O) (resid 118 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 115 and name  O) (resid 119 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 116 and name  C) (resid 121 and name  C) 8.27 0.20 0.10 !helix
+assign (resid 116 and name  C) (resid 119 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 116 and name  C) (resid 120 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 116 and name CA) (resid 121 and name CA) 8.73 0.20 0.10 !helix
+assign (resid 116 and name CA) (resid 119 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 116 and name CA) (resid 120 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 116 and name  N) (resid 121 and name  N) 8.18 0.20 0.10 !helix
+assign (resid 116 and name  N) (resid 119 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 116 and name  N) (resid 120 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 116 and name  O) (resid 121 and name  O) 8.50 0.20 0.10 !helix
+assign (resid 116 and name  O) (resid 119 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 116 and name  O) (resid 120 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 117 and name  C) (resid 120 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 117 and name  C) (resid 121 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 117 and name CA) (resid 120 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 117 and name CA) (resid 121 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 117 and name  N) (resid 120 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 117 and name  N) (resid 121 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 117 and name  O) (resid 120 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 117 and name  O) (resid 121 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 161 and name  C) (resid 166 and name  C) 8.27 0.20 0.10 !helix
+assign (resid 161 and name  C) (resid 164 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 161 and name  C) (resid 165 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 161 and name CA) (resid 166 and name CA) 8.73 0.20 0.10 !helix
+assign (resid 161 and name CA) (resid 164 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 161 and name CA) (resid 165 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 161 and name  N) (resid 166 and name  N) 8.18 0.20 0.10 !helix
+assign (resid 161 and name  N) (resid 164 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 161 and name  N) (resid 165 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 161 and name  O) (resid 166 and name  O) 8.50 0.20 0.10 !helix
+assign (resid 161 and name  O) (resid 164 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 161 and name  O) (resid 165 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 162 and name  C) (resid 167 and name  C) 8.27 0.20 0.10 !helix
+assign (resid 162 and name  C) (resid 165 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 162 and name  C) (resid 166 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 162 and name CA) (resid 167 and name CA) 8.73 0.20 0.10 !helix
+assign (resid 162 and name CA) (resid 165 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 162 and name CA) (resid 166 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 162 and name  N) (resid 167 and name  N) 8.18 0.20 0.10 !helix
+assign (resid 162 and name  N) (resid 165 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 162 and name  N) (resid 166 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 162 and name  O) (resid 167 and name  O) 8.50 0.20 0.10 !helix
+assign (resid 162 and name  O) (resid 165 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 162 and name  O) (resid 166 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 163 and name  C) (resid 168 and name  C) 8.27 0.20 0.10 !helix
+assign (resid 163 and name  C) (resid 166 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 163 and name  C) (resid 167 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 163 and name CA) (resid 168 and name CA) 8.73 0.20 0.10 !helix
+assign (resid 163 and name CA) (resid 166 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 163 and name CA) (resid 167 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 163 and name  N) (resid 168 and name  N) 8.18 0.20 0.10 !helix
+assign (resid 163 and name  N) (resid 166 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 163 and name  N) (resid 167 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 163 and name  O) (resid 168 and name  O) 8.50 0.20 0.10 !helix
+assign (resid 163 and name  O) (resid 166 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 163 and name  O) (resid 167 and name  O) 6.22 0.20 0.10 !helix
+assign (resid 164 and name  C) (resid 167 and name  C) 5.01 0.20 0.10 !helix
+assign (resid 164 and name  C) (resid 168 and name  C) 6.20 0.20 0.10 !helix
+assign (resid 164 and name CA) (resid 167 and name CA) 5.25 0.20 0.10 !helix
+assign (resid 164 and name CA) (resid 168 and name CA) 6.27 0.20 0.10 !helix
+assign (resid 164 and name  N) (resid 167 and name  N) 4.96 0.20 0.10 !helix
+assign (resid 164 and name  N) (resid 168 and name  N) 6.23 0.20 0.10 !helix
+assign (resid 164 and name  O) (resid 167 and name  O) 5.13 0.20 0.10 !helix
+assign (resid 164 and name  O) (resid 168 and name  O) 6.22 0.20 0.10 !helix
+assign (resid   6 and name  O) (resid   7 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid   7 and name  O) (resid   8 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid   8 and name  O) (resid   9 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid   9 and name  O) (resid  10 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  10 and name  O) (resid  11 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  11 and name  O) (resid  12 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  12 and name  O) (resid  13 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  18 and name  O) (resid  19 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  19 and name  O) (resid  20 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  20 and name  O) (resid  21 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  49 and name  O) (resid  50 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  50 and name  O) (resid  51 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  51 and name  O) (resid  52 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  52 and name  O) (resid  53 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  53 and name  O) (resid  54 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  54 and name  O) (resid  55 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  73 and name  O) (resid  74 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  74 and name  O) (resid  75 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  75 and name  O) (resid  76 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  76 and name  O) (resid  77 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  84 and name  O) (resid  85 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  85 and name  O) (resid  86 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  86 and name  O) (resid  87 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  90 and name  O) (resid  91 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  91 and name  O) (resid  92 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  92 and name  O) (resid  93 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 106 and name  O) (resid 107 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 107 and name  O) (resid 108 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 108 and name  O) (resid 109 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 109 and name  O) (resid 110 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 110 and name  O) (resid 111 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 127 and name  O) (resid 128 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 128 and name  O) (resid 129 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 129 and name  O) (resid 130 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 130 and name  O) (resid 131 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 131 and name  O) (resid 132 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 132 and name  O) (resid 133 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 133 and name  O) (resid 134 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 134 and name  O) (resid 135 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 135 and name  O) (resid 136 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 147 and name  O) (resid 148 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 156 and name  O) (resid 157 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 157 and name  O) (resid 158 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 177 and name  O) (resid 178 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 178 and name  O) (resid 179 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 182 and name  O) (resid 183 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 183 and name  O) (resid 184 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 184 and name  O) (resid 185 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 185 and name  O) (resid 186 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 186 and name  O) (resid 187 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 187 and name  O) (resid 188 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 188 and name  O) (resid 189 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 189 and name  O) (resid 190 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid 190 and name  O) (resid 191 and name  O) 4.65 0.20 0.10 !unpaired E residue

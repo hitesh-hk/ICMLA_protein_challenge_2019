@@ -1,0 +1,891 @@
+          ============================================================
+          |                                                          |
+          |            Crystallography & NMR System (CNS)            |
+          |                         CNSsolve                         |
+          |                                                          |
+          ============================================================
+           Version: 1.3
+           Status: General release
+          ============================================================
+           Written by: A.T.Brunger, P.D.Adams, G.M.Clore, W.L.DeLano,
+                       P.Gros, R.W.Grosse-Kunstleve,J.-S.Jiang,J.M.Krahn,
+                       J.Kuszewski, M.Nilges, N.S.Pannu, R.J.Read,
+                       L.M.Rice, G.F.Schroeder, T.Simonson, G.L.Warren.
+           Copyright (c) 1997-2010 Yale University
+          ============================================================
+           Running on machine: atbmac2.stanford.edu (Mac/Intel,64-bit)
+                               with  4 threads
+           Program started by: brunger
+           Program started at: 11:02:31 on 07-Nov-2011
+          ============================================================
+
+ FFT3C: Using FFTPACK4.1
+
+ CNSsolve>remarks file test/noetest5.inp 
+ CNSsolve>remarks  test high-dimensional NOE facility 
+ CNSsolve>remarks 
+ CNSsolve> 
+ CNSsolve>parameters                     ! all hydrogen SA variable parameters 
+ PARRDR>  reset                        !   force constant for angles with HB reduced 
+ PARRDR>  @CNS_TOPPAR:protein-allhdg5-4.param 
+ ASSFIL: file protein-allhdg5-4.param opened.
+ PARRDR>remarks file toppar/protein-allhdg5-4.param 
+ PARRDR>remark 
+ PARRDR>remark   for file protein-allhdg-ucl.top  version UCL  date 14-MAR-00 
+ PARRDR>remark   for file protein-allhdg-dih-ucl.top  version UCL  date 07-JUL-01 
+ PARRDR>remark   Geometric energy function parameters for distance geometry and 
+ PARRDR>remark   simulated annealing. 
+ PARRDR>remark   Original author: Michael Nilges, EMBL Heidelberg 
+ PARRDR>remark   Modifications: Mark A. Williams, UCL London 
+ PARRDR>remark   Several modifications for HADDOCK: Alexandre Bonvin, Utrecht Uni 
+ PARRDR>remark   Last modification 8-19-2011 
+ PARRDR> 
+ PARRDR>set message ? end eval ($old_message=$result) set echo ? end eval ($old_echo=$result) 
+ MESSage=NORM
+ EVALUATE: symbol $OLD_MESSAGE set to "NORM" (string)
+ ECHO=TRUE {ON}
+ EVALUATE: symbol $OLD_ECHO set to TRUE (logical)
+ PARRDR>set message=off echo=off end 
+ PARRDR> 
+ PARRDR>end 
+ CNSsolve> 
+ CNSsolve>topology @CNS_TOPPAR:protein-allhdg5-4.top end 
+ ASSFIL: file protein-allhdg5-4.top opened.
+ RTFRDR>remarks file toppar/protein-allhdg5-4.top 
+ RTFRDR>remarks 
+ RTFRDR>remarks   file topallhdg.pro  version 5.4  date 07-July-10 
+ RTFRDR>remarks      for file parallhdg.pro version 5.4 date 07-July-10 or later 
+ RTFRDR>remarks   Geometric energy function parameters for distance geometry and 
+ RTFRDR>remarks      simulated annealing. 
+ RTFRDR>remarks   Author: Michael Nilges, EMBL Heidelberg; Institut Pasteur, Paris 
+ RTFRDR>remarks   This file contains modifications from M. Williams, UCL London 
+ RTFRDR>remarks   and multiple modifications for HADDOCK from A. Bonvin, Utrecht University 
+ RTFRDR>remarks   Last modification 8-19-2011 
+ RTFRDR> 
+ RTFRDR>set message ? end eval ($old_message=$result) set echo ? end eval ($old_echo=$result) 
+ MESSage=NORM
+ EVALUATE: symbol $OLD_MESSAGE set to "NORM" (string)
+ ECHO=TRUE {ON}
+ EVALUATE: symbol $OLD_ECHO set to TRUE (logical)
+ RTFRDR>set message=off echo=off end 
+ RTFRDR> 
+ RTFRDR> end 
+ CNSsolve> 
+ CNSsolve>segment 
+ SEGMENT>  name="cmti" 
+ SEGMENT>  chain 
+ CHAIN>    @CNS_TOPPAR:protein-allhdg5-4.link 
+ ASSFIL: file protein-allhdg5-4.link opened.
+ CHAIN>remarks file toppar/protein-allhdg5-4.link 
+ CHAIN>remarks 
+ CHAIN>remarks this is a macro to define standard protein peptide bonds 
+ CHAIN>remarks and termini to generate a protein sequence. 
+ CHAIN> 
+ CHAIN>!added links for MSE (8-19-2011, ATB) 
+ CHAIN> 
+ CHAIN>set message ? end eval ($old_message=$result) set echo ? end eval ($old_echo=$result) 
+ MESSage=NORM
+ EVALUATE: symbol $OLD_MESSAGE set to "NORM" (string)
+ ECHO=TRUE {ON}
+ EVALUATE: symbol $OLD_ECHO set to TRUE (logical)
+ CHAIN>set message=off echo=off end 
+ CHAIN> 
+ CHAIN>    coor 
+ COOR>REMARK FILENAME="" 
+ COOR>REMARK hybrid DG-SA method 
+ COOR>REMARK Crambin, test calculation with floating assignments 
+ COOR>REMARK DATE:27-Oct-92  17:14:00       created by user: judith 
+ COOR>ATOM      1  CA  ARG     1     -11.812  -2.461  -0.713  0.00  0.00      cmti 
+ SEGMNT-info: chain termination due to END keyword.    29 residues were inserted into segid "cmti"
+ CHAIN>  end 
+ SEGMENT>end 
+ Status of internal molecular topology database:
+ -> NATOM=        443(MAXA=     1000000)  NBOND=        445(MAXB=     1000000)
+ -> NTHETA=       804(MAXT=     2000000)  NGRP=          31(MAXGRP=   1000000)
+ -> NPHI=         709(MAXP=     2000000)  NIMPHI=       225(MAXIMP=   1000000)
+ -> NNB=          156(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>patch disu 
+ PATCH>  reference=1=(resid 3) 
+ SELRPN:     11 atoms have been selected out of    443
+ PATCH>  reference=2=(resid 20) 
+ SELRPN:     11 atoms have been selected out of    443
+ PATCH>end 
+ Status of internal molecular topology database:
+ -> NATOM=        441(MAXA=     1000000)  NBOND=        444(MAXB=     1000000)
+ -> NTHETA=       804(MAXT=     2000000)  NGRP=          33(MAXGRP=   1000000)
+ -> NPHI=         715(MAXP=     2000000)  NIMPHI=       225(MAXIMP=   1000000)
+ -> NNB=          156(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>patch disu 
+ PATCH>  reference=1=(resid 10) 
+ SELRPN:     11 atoms have been selected out of    441
+ PATCH>  reference=2=(resid 22) 
+ SELRPN:     11 atoms have been selected out of    441
+ PATCH>end 
+ Status of internal molecular topology database:
+ -> NATOM=        439(MAXA=     1000000)  NBOND=        443(MAXB=     1000000)
+ -> NTHETA=       804(MAXT=     2000000)  NGRP=          35(MAXGRP=   1000000)
+ -> NPHI=         721(MAXP=     2000000)  NIMPHI=       225(MAXIMP=   1000000)
+ -> NNB=          156(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>patch disu 
+ PATCH>  reference=1=(resid 16) 
+ SELRPN:     11 atoms have been selected out of    439
+ PATCH>  reference=2=(resid 28) 
+ SELRPN:     11 atoms have been selected out of    439
+ PATCH>end 
+ Status of internal molecular topology database:
+ -> NATOM=        437(MAXA=     1000000)  NBOND=        442(MAXB=     1000000)
+ -> NTHETA=       804(MAXT=     2000000)  NGRP=          37(MAXGRP=   1000000)
+ -> NPHI=         727(MAXP=     2000000)  NIMPHI=       225(MAXIMP=   1000000)
+ -> NNB=          156(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>coor 
+ COOR>REMARK FILENAME="" 
+ COOR>REMARK hybrid DG-SA method 
+ COOR>REMARK Crambin, test calculation with floating assignments 
+ COOR>REMARK DATE:27-Oct-92  17:14:00       created by user: judith 
+ COOR>ATOM      1  CA  ARG     1     -11.812  -2.461  -0.713  0.00  0.00      cmti 
+ COOR>ATOM      2  HA  ARG     1     -11.287  -1.772  -0.059  0.00  0.00      cmti 
+ %READC-WRN: still      1 missing coordinates (in selected subset)
+ CNSsolve> 
+ CNSsolve>delete sele=(not(known)) end 
+ SELRPN:      1 atoms have been selected out of    437
+ Status of internal molecular topology database:
+ -> NATOM=        436(MAXA=     1000000)  NBOND=        441(MAXB=     1000000)
+ -> NTHETA=       802(MAXT=     2000000)  NGRP=          37(MAXGRP=   1000000)
+ -> NPHI=         727(MAXP=     2000000)  NIMPHI=       225(MAXIMP=   1000000)
+ -> NNB=          156(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>!----------------------------------- 
+ CNSsolve>! Set up energy potential parameters 
+ CNSsolve> 
+ CNSsolve>parameters 
+ PARRDR>  nbonds 
+ NBDSET>    nbxmod = -3 
+ NBDSET>    wmin   = 0.5           ! warnings at 0.5 A distance 
+ NBDSET>    cutnb  = 4.0           ! nonbonded cutoff distance 
+ NBDSET>    toler  = 0.5           ! distance change predict mode=reciprocal to=fcalc end tolerance 
+ NBDSET>    repel  = 1.0           ! turn on repel function; full L-J vdW radii 
+ NBDSET>    rexpon = 2             ! repel exponent 
+ NBDSET>    rconst = 0.001         ! repel energy constant; initially very small 
+ NBDSET>  end 
+ PARRDR>end 
+ CNSsolve> 
+ CNSsolve>flags 
+ FLAGS>  exclude *                           ! do not rely on defaults 
+ FLAGS>  include bond angle improper vdw     ! no dihedral terms in this force field 
+ FLAGS>end 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>!------------------------------------ 
+ CNSsolve>! Dynamical simulated annealing setup 
+ CNSsolve> 
+ CNSsolve>noe 
+ NOE>  reset 
+ NOE>  nrestraints = 1000                            ! allocate space for NOEs 
+ NOE: allocating space for    1000 restraints.
+ NOE> 
+ NOE>  class      strng 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE> 
+ NOE>  averaging  strng cent 
+ NOE>  potential  strng square 
+ NOE>  scale      strng 0.1                         ! initially very low scale 
+ NOE>  sqconstant strng 1.0 
+ NOE>  sqexponent strng 2 
+ NOE> 
+ NOE>  class       2dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   2dim cent 
+ NOE>  potential   2dim highd 
+ NOE>  ncount      2dim 2 
+ NOE>  scale       2dim 0.1 
+ NOE>  bhig        2dim 0.01 
+ NOE> 
+ NOE>  class       4dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   4dim cent 
+ NOE>  potential   4dim highd 
+ NOE>  ncount      4dim 4 
+ NOE>  scale       4dim 0.1 
+ NOE>  bhig        4dim 0.01 
+ NOE> 
+ NOE>  class       6dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   6dim cent 
+ NOE>  potential   6dim highd 
+ NOE>  ncount      6dim 6 
+ NOE>  scale       6dim 0.1 
+ NOE>  bhig        6dim 0.01 
+ NOE> 
+ NOE>  class       8dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   8dim cent 
+ NOE>  potential   8dim highd 
+ NOE>  ncount      8dim 8 
+ NOE>  scale       8dim 0.1 
+ NOE>  bhig        8dim 0.01 
+ NOE> 
+ NOE>  class       10dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE> 
+ NOE>  averaging   10dim cent 
+ NOE>  potential   10dim highd 
+ NOE>  ncount      10dim 10 
+ NOE>  scale       10dim 0.1 
+ NOE>  bhig        10dim 0.01 
+ NOE> 
+ NOE>  class       12dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=0 end 
+ NOE>  averaging   12dim cent 
+ NOE>  potential   12dim highd 
+ NOE>  ncount      12dim 12 
+ NOE>  scale       12dim 0.1 
+ NOE>  bhig        12dim 0.01 
+ NOE> 
+ NOE>  class       14dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   14dim cent 
+ NOE>  potential   14dim highd 
+ NOE>  ncount      14dim 14 
+ NOE>  scale       14dim 0.1 
+ NOE>  bhig        14dim 0.01 
+ NOE> 
+ NOE>  class       16dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   16dim cent 
+ NOE>  potential   16dim highd 
+ NOE>  ncount      16dim 16 
+ NOE>  scale       16dim 0.1 
+ NOE>  bhig        16dim 0.01 
+ NOE> 
+ NOE>  class       20dim 
+ NOE>set echo=false end 
+ NOE>set wrnlev=5 end 
+ NOE>  averaging   20dim cent 
+ NOE>  potential   20dim highd 
+ NOE>  ncount      20dim 18 
+ NOE>  scale       20dim 0.1 
+ NOE>  bhig        20dim 0.01 
+ NOE>end 
+ CNSsolve> 
+ CNSsolve>flags 
+ FLAGS>  include NOE cdih                          ! include restraints 
+ FLAGS>end 
+ CNSsolve> 
+ CNSsolve>evaluate ($4 = 0.5) 
+ EVALUATE: symbol $4 set to   0.500000     (real)
+ CNSsolve>set echo=false end 
+ CNSsolve>set wrnlev=5 end 
+ CNSsolve> 
+ CNSsolve>do (mass  =  10.0) (all)               ! uniform mass 
+ SELRPN:    436 atoms have been selected out of    436
+ CNSsolve>do (fbeta = 100.0) (all)               ! coupling to heatbath 
+ SELRPN:    436 atoms have been selected out of    436
+ CNSsolve> 
+ CNSsolve>set seed=12345 end 
+ CNSsolve> 
+ CNSsolve>do (vx = maxwell (1000.0)) (all)     ! starting velocities at 1000.0 K 
+ SELRPN:    436 atoms have been selected out of    436
+ CNSsolve>do (vy = maxwell (1000.0)) (all) 
+ SELRPN:    436 atoms have been selected out of    436
+ CNSsolve>do (vz = maxwell (1000.0)) (all) 
+ SELRPN:    436 atoms have been selected out of    436
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>eval ($1 = 0.1)          ! initial force constant for vdw 
+ EVALUATE: symbol $1 set to   0.100000     (real)
+ CNSsolve>eval ($3 = 1.)            ! initial scale on NOE, hbond restraints 
+ EVALUATE: symbol $3 set to    1.00000     (real)
+ CNSsolve>eval ($6 = 0.1) 
+ EVALUATE: symbol $6 set to   0.100000     (real)
+ CNSsolve>eval ($4 = 1.)            ! initial scale on dihedral restraints 
+ EVALUATE: symbol $4 set to    1.00000     (real)
+ CNSsolve>  eval ($1 = $1*1.125)        ! increase vdw constant to 0.25 
+ EVALUATE: symbol $1 set to   0.112500     (real)
+ CNSsolve>  eval ($1 = min($1, 0.25)) 
+ EVALUATE: symbol $1 set to   0.112500     (real)
+ CNSsolve>  parameters 
+ PARRDR>    nbonds   rconst = $1    end 
+ PARRDR>  end 
+ CNSsolve> 
+ CNSsolve>  eval ($6 = $6 * 2.0) 
+ EVALUATE: symbol $6 set to   0.200000     (real)
+ CNSsolve>  eval ($6 = min ($6, 5.0)) 
+ EVALUATE: symbol $6 set to   0.200000     (real)
+ CNSsolve>  eval ($3 = $3 * 2.0)                ! increase NOE scale to 50 
+ EVALUATE: symbol $3 set to    2.00000     (real)
+ CNSsolve>  eval ($3 = min ($3, 50.0)) 
+ EVALUATE: symbol $3 set to    2.00000     (real)
+ CNSsolve>  noe 
+ NOE>    scale strng $3 
+ NOE>    scale 2dim $6 
+ NOE>    scale 4dim $6 
+ NOE>    scale 6dim $6 
+ NOE>    scale 8dim $6 
+ NOE>    scale 10dim $6 
+ NOE>    scale 12dim $6 
+ NOE>    scale 14dim $6 
+ NOE>    scale 16dim $6 
+ NOE>    scale 20dim $6 
+ NOE>  end 
+ CNSsolve> 
+ CNSsolve>  eval ($4 = $4 * 2.0) 
+ EVALUATE: symbol $4 set to    2.00000     (real)
+ CNSsolve>  eval ($4 = min ($4, 200.0))         ! increase dihedral constant to 200 
+ EVALUATE: symbol $4 set to    2.00000     (real)
+ CNSsolve>  restraints 
+ RESTraints>    dihedrals 
+ DIHEDRAL>      scale = $4 
+ DIHEDRAL>  end 
+ CNSsolve> 
+ CNSsolve>  minimize powell 
+ POWELL>     nstep=100 drop=10 
+ POWELL>  end 
+ POWELL: number of degrees of freedom=  1308
+ NBONDS: generating intra-molecular exclusion list with mode=-3
+ MAKINB: mode  -3 found   1243 exclusions and      0 interactions(1-4)
+ NBONDS: found     3037 intra-atom interactions
+ --------------- cycle=     1 ------ stepsize=    0.0000 -----------------------
+ | Etotal =60042.623  grad(E)=305.116    E(BOND)=121.865    E(ANGL)=269.366    |
+ | E(IMPR)=57696.184  E(VDW )=1939.416   E(CDIH)=0.466      E(NOE )=15.325     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     2 ------ stepsize=    0.0000 -----------------------
+ | Etotal =59739.912  grad(E)=300.326    E(BOND)=119.677    E(ANGL)=262.990    |
+ | E(IMPR)=57402.161  E(VDW )=1939.277   E(CDIH)=0.467      E(NOE )=15.339     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     3 ------ stepsize=    0.0000 -----------------------
+ | Etotal =57235.582  grad(E)=258.757    E(BOND)=133.443    E(ANGL)=296.510    |
+ | E(IMPR)=54851.562  E(VDW )=1938.117   E(CDIH)=0.484      E(NOE )=15.466     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     4 ------ stepsize=    0.0001 -----------------------
+ | Etotal =50898.154  grad(E)=206.629    E(BOND)=1309.105   E(ANGL)=3715.304   |
+ | E(IMPR)=43922.275  E(VDW )=1934.507   E(CDIH)=0.594      E(NOE )=16.370     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     3028 intra-atom interactions
+ --------------- cycle=     5 ------ stepsize=    0.0002 -----------------------
+ | Etotal =47559.520  grad(E)=174.026    E(BOND)=1575.572   E(ANGL)=7066.659   |
+ | E(IMPR)=36954.007  E(VDW )=1944.829   E(CDIH)=0.693      E(NOE )=17.761     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     6 ------ stepsize=    0.0000 -----------------------
+ | Etotal =47426.838  grad(E)=149.867    E(BOND)=1465.754   E(ANGL)=6298.700   |
+ | E(IMPR)=37701.035  E(VDW )=1943.153   E(CDIH)=0.676      E(NOE )=17.520     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     7 ------ stepsize=    0.0001 -----------------------
+ | Etotal =45531.337  grad(E)=100.728    E(BOND)=1140.711   E(ANGL)=7617.420   |
+ | E(IMPR)=34803.435  E(VDW )=1950.473   E(CDIH)=0.716      E(NOE )=18.582     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     8 ------ stepsize=    0.0000 -----------------------
+ | Etotal =45530.910  grad(E)=102.083    E(BOND)=1142.076   E(ANGL)=7647.890   |
+ | E(IMPR)=34771.028  E(VDW )=1950.601   E(CDIH)=0.716      E(NOE )=18.599     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=     9 ------ stepsize=    0.0001 -----------------------
+ | Etotal =44497.656  grad(E)=74.222     E(BOND)=975.235    E(ANGL)=8334.427   |
+ | E(IMPR)=33217.666  E(VDW )=1950.290   E(CDIH)=0.716      E(NOE )=19.323     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    10 ------ stepsize=    0.0000 -----------------------
+ | Etotal =44474.642  grad(E)=84.744     E(BOND)=993.810    E(ANGL)=8518.671   |
+ | E(IMPR)=32991.658  E(VDW )=1950.331   E(CDIH)=0.716      E(NOE )=19.456     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    11 ------ stepsize=    0.0002 -----------------------
+ | Etotal =43670.188  grad(E)=70.398     E(BOND)=863.009    E(ANGL)=9702.214   |
+ | E(IMPR)=31138.391  E(VDW )=1945.606   E(CDIH)=0.683      E(NOE )=20.286     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    12 ------ stepsize=    0.0000 -----------------------
+ | Etotal =43662.354  grad(E)=78.706     E(BOND)=866.623    E(ANGL)=9863.832   |
+ | E(IMPR)=30965.696  E(VDW )=1945.141   E(CDIH)=0.679      E(NOE )=20.382     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     3031 intra-atom interactions
+ --------------- cycle=    13 ------ stepsize=    0.0002 -----------------------
+ | Etotal =42984.372  grad(E)=80.294     E(BOND)=694.429    E(ANGL)=10764.679  |
+ | E(IMPR)=29569.679  E(VDW )=1933.649   E(CDIH)=0.615      E(NOE )=21.320     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    14 ------ stepsize=    0.0000 -----------------------
+ | Etotal =42984.311  grad(E)=79.524     E(BOND)=694.276    E(ANGL)=10753.506  |
+ | E(IMPR)=29580.860  E(VDW )=1933.743   E(CDIH)=0.616      E(NOE )=21.311     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    15 ------ stepsize=    0.0002 -----------------------
+ | Etotal =42621.408  grad(E)=114.364    E(BOND)=878.210    E(ANGL)=12350.781  |
+ | E(IMPR)=27451.957  E(VDW )=1917.201   E(CDIH)=0.571      E(NOE )=22.687     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    16 ------ stepsize=   -0.0001 -----------------------
+ | Etotal =42539.171  grad(E)=82.098     E(BOND)=783.224    E(ANGL)=11818.377  |
+ | E(IMPR)=27992.849  E(VDW )=1921.880   E(CDIH)=0.584      E(NOE )=22.257     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    17 ------ stepsize=    0.0001 -----------------------
+ | Etotal =42029.887  grad(E)=71.479     E(BOND)=1029.089   E(ANGL)=12995.513  |
+ | E(IMPR)=26075.384  E(VDW )=1906.008   E(CDIH)=0.586      E(NOE )=23.307     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    18 ------ stepsize=    0.0000 -----------------------
+ | Etotal =42020.169  grad(E)=78.422     E(BOND)=1090.100   E(ANGL)=13210.715  |
+ | E(IMPR)=25791.650  E(VDW )=1903.633   E(CDIH)=0.588      E(NOE )=23.484     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     3001 intra-atom interactions
+ --------------- cycle=    19 ------ stepsize=    0.0001 -----------------------
+ | Etotal =41194.839  grad(E)=64.434     E(BOND)=1158.774   E(ANGL)=13151.268  |
+ | E(IMPR)=24973.901  E(VDW )=1886.278   E(CDIH)=0.605      E(NOE )=24.012     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    20 ------ stepsize=    0.0002 -----------------------
+ | Etotal =40843.994  grad(E)=107.127    E(BOND)=1484.551   E(ANGL)=13538.030  |
+ | E(IMPR)=23929.902  E(VDW )=1866.062   E(CDIH)=0.634      E(NOE )=24.814     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2970 intra-atom interactions
+ --------------- cycle=    21 ------ stepsize=    0.0002 -----------------------
+ | Etotal =40734.079  grad(E)=169.963    E(BOND)=3180.348   E(ANGL)=15308.212  |
+ | E(IMPR)=20406.707  E(VDW )=1810.797   E(CDIH)=0.680      E(NOE )=27.334     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    22 ------ stepsize=   -0.0001 -----------------------
+ | Etotal =40110.867  grad(E)=118.099    E(BOND)=2093.190   E(ANGL)=14333.344  |
+ | E(IMPR)=21824.319  E(VDW )=1833.279   E(CDIH)=0.657      E(NOE )=26.078     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    23 ------ stepsize=    0.0001 -----------------------
+ | Etotal =39043.310  grad(E)=100.418    E(BOND)=2318.422   E(ANGL)=14232.828  |
+ | E(IMPR)=20646.145  E(VDW )=1818.789   E(CDIH)=0.643      E(NOE )=26.483     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    24 ------ stepsize=    0.0001 -----------------------
+ | Etotal =38643.919  grad(E)=125.643    E(BOND)=3065.873   E(ANGL)=14373.365  |
+ | E(IMPR)=19375.525  E(VDW )=1801.485   E(CDIH)=0.630      E(NOE )=27.041     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2968 intra-atom interactions
+ --------------- cycle=    25 ------ stepsize=    0.0002 -----------------------
+ | Etotal =36671.992  grad(E)=135.773    E(BOND)=3240.226   E(ANGL)=13559.446  |
+ | E(IMPR)=18064.280  E(VDW )=1780.091   E(CDIH)=0.573      E(NOE )=27.375     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    26 ------ stepsize=    0.0001 -----------------------
+ | Etotal =36468.482  grad(E)=164.176    E(BOND)=3555.629   E(ANGL)=13473.859  |
+ | E(IMPR)=17640.484  E(VDW )=1770.377   E(CDIH)=0.549      E(NOE )=27.583     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2948 intra-atom interactions
+ --------------- cycle=    27 ------ stepsize=    0.0001 -----------------------
+ | Etotal =34421.755  grad(E)=154.740    E(BOND)=4015.711   E(ANGL)=12345.189  |
+ | E(IMPR)=16286.948  E(VDW )=1744.695   E(CDIH)=0.534      E(NOE )=28.678     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    28 ------ stepsize=    0.0000 -----------------------
+ | Etotal =34396.259  grad(E)=144.790    E(BOND)=3902.917   E(ANGL)=12349.238  |
+ | E(IMPR)=16368.334  E(VDW )=1746.705   E(CDIH)=0.534      E(NOE )=28.530     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    29 ------ stepsize=    0.0001 -----------------------
+ | Etotal =32205.472  grad(E)=124.939    E(BOND)=3602.593   E(ANGL)=11628.171  |
+ | E(IMPR)=15206.085  E(VDW )=1738.751   E(CDIH)=0.574      E(NOE )=29.297     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    30 ------ stepsize=    0.0001 -----------------------
+ | Etotal =31828.572  grad(E)=171.333    E(BOND)=3772.250   E(ANGL)=11473.140  |
+ | E(IMPR)=14818.170  E(VDW )=1734.517   E(CDIH)=0.605      E(NOE )=29.890     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2935 intra-atom interactions
+ --------------- cycle=    31 ------ stepsize=    0.0001 -----------------------
+ | Etotal =29437.043  grad(E)=175.046    E(BOND)=3817.874   E(ANGL)=11260.285  |
+ | E(IMPR)=12608.588  E(VDW )=1718.388   E(CDIH)=0.725      E(NOE )=31.182     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    32 ------ stepsize=    0.0000 -----------------------
+ | Etotal =29412.809  grad(E)=162.689    E(BOND)=3735.663   E(ANGL)=11229.165  |
+ | E(IMPR)=12696.892  E(VDW )=1719.334   E(CDIH)=0.711      E(NOE )=31.044     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    33 ------ stepsize=    0.0001 -----------------------
+ | Etotal =26777.267  grad(E)=129.594    E(BOND)=3394.280   E(ANGL)=10766.807  |
+ | E(IMPR)=10876.244  E(VDW )=1707.292   E(CDIH)=0.781      E(NOE )=31.862     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    34 ------ stepsize=    0.0000 -----------------------
+ | Etotal =26681.166  grad(E)=143.116    E(BOND)=3524.671   E(ANGL)=10828.746  |
+ | E(IMPR)=10589.968  E(VDW )=1704.887   E(CDIH)=0.803      E(NOE )=32.091     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2920 intra-atom interactions
+ --------------- cycle=    35 ------ stepsize=    0.0001 -----------------------
+ | Etotal =24567.354  grad(E)=125.937    E(BOND)=3104.282   E(ANGL)=10060.084  |
+ | E(IMPR)=9675.927   E(VDW )=1693.652   E(CDIH)=0.745      E(NOE )=32.663     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    36 ------ stepsize=    0.0000 -----------------------
+ | Etotal =24562.693  grad(E)=129.924    E(BOND)=3117.482   E(ANGL)=10065.506  |
+ | E(IMPR)=9653.002   E(VDW )=1693.262   E(CDIH)=0.743      E(NOE )=32.698     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    37 ------ stepsize=    0.0002 -----------------------
+ | Etotal =22935.456  grad(E)=146.541    E(BOND)=3207.464   E(ANGL)=9549.959   |
+ | E(IMPR)=8449.135   E(VDW )=1694.743   E(CDIH)=0.640      E(NOE )=33.515     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    38 ------ stepsize=    0.0000 -----------------------
+ | Etotal =22928.383  grad(E)=138.865    E(BOND)=3178.485   E(ANGL)=9530.461   |
+ | E(IMPR)=8490.788   E(VDW )=1694.547   E(CDIH)=0.645      E(NOE )=33.458     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    39 ------ stepsize=    0.0001 -----------------------
+ | Etotal =20974.899  grad(E)=140.242    E(BOND)=3142.057   E(ANGL)=9185.798   |
+ | E(IMPR)=6915.778   E(VDW )=1696.242   E(CDIH)=0.594      E(NOE )=34.430     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2934 intra-atom interactions
+ --------------- cycle=    40 ------ stepsize=    0.0000 -----------------------
+ | Etotal =20936.116  grad(E)=154.119    E(BOND)=3215.115   E(ANGL)=9212.689   |
+ | E(IMPR)=6774.248   E(VDW )=1698.832   E(CDIH)=0.586      E(NOE )=34.646     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    41 ------ stepsize=    0.0001 -----------------------
+ | Etotal =20515.560  grad(E)=206.794    E(BOND)=3345.495   E(ANGL)=8804.520   |
+ | E(IMPR)=6626.667   E(VDW )=1702.014   E(CDIH)=0.599      E(NOE )=36.266     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    42 ------ stepsize=   -0.0001 -----------------------
+ | Etotal =20137.785  grad(E)=204.503    E(BOND)=3125.581   E(ANGL)=8887.007   |
+ | E(IMPR)=6389.208   E(VDW )=1699.997   E(CDIH)=0.592      E(NOE )=35.400     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    43 ------ stepsize=    0.0000 -----------------------
+ | Etotal =18957.748  grad(E)=117.852    E(BOND)=3122.193   E(ANGL)=8598.647   |
+ | E(IMPR)=5499.896   E(VDW )=1700.344   E(CDIH)=0.615      E(NOE )=36.054     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    44 ------ stepsize=    0.0000 -----------------------
+ | Etotal =18753.213  grad(E)=132.793    E(BOND)=3234.898   E(ANGL)=8535.757   |
+ | E(IMPR)=5244.593   E(VDW )=1700.836   E(CDIH)=0.631      E(NOE )=36.498     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    45 ------ stepsize=    0.0001 -----------------------
+ | Etotal =17745.300  grad(E)=89.643     E(BOND)=3045.158   E(ANGL)=8222.357   |
+ | E(IMPR)=4740.525   E(VDW )=1699.829   E(CDIH)=0.656      E(NOE )=36.775     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    46 ------ stepsize=    0.0000 -----------------------
+ | Etotal =17489.071  grad(E)=127.384    E(BOND)=2964.973   E(ANGL)=8035.395   |
+ | E(IMPR)=4751.797   E(VDW )=1699.208   E(CDIH)=0.679      E(NOE )=37.019     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2949 intra-atom interactions
+ --------------- cycle=    47 ------ stepsize=    0.0001 -----------------------
+ | Etotal =15925.472  grad(E)=109.348    E(BOND)=2503.076   E(ANGL)=7371.641   |
+ | E(IMPR)=4305.042   E(VDW )=1707.664   E(CDIH)=0.719      E(NOE )=37.330     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    48 ------ stepsize=    0.0001 -----------------------
+ | Etotal =15702.697  grad(E)=132.296    E(BOND)=2482.554   E(ANGL)=7330.017   |
+ | E(IMPR)=4141.215   E(VDW )=1710.595   E(CDIH)=0.746      E(NOE )=37.570     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    49 ------ stepsize=    0.0002 -----------------------
+ | Etotal =14102.056  grad(E)=156.679    E(BOND)=1913.562   E(ANGL)=6301.429   |
+ | E(IMPR)=4132.879   E(VDW )=1715.106   E(CDIH)=0.723      E(NOE )=38.357     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    50 ------ stepsize=    0.0000 -----------------------
+ | Etotal =14074.330  grad(E)=144.323    E(BOND)=1917.281   E(ANGL)=6335.309   |
+ | E(IMPR)=4068.328   E(VDW )=1714.430   E(CDIH)=0.725      E(NOE )=38.257     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2940 intra-atom interactions
+ --------------- cycle=    51 ------ stepsize=    0.0001 -----------------------
+ | Etotal =13173.865  grad(E)=132.954    E(BOND)=1982.049   E(ANGL)=5887.847   |
+ | E(IMPR)=3546.922   E(VDW )=1717.135   E(CDIH)=0.687      E(NOE )=39.225     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    52 ------ stepsize=    0.0000 -----------------------
+ | Etotal =12971.593  grad(E)=90.599     E(BOND)=1860.967   E(ANGL)=5877.919   |
+ | E(IMPR)=3476.404   E(VDW )=1716.686   E(CDIH)=0.697      E(NOE )=38.920     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    53 ------ stepsize=    0.0001 -----------------------
+ | Etotal =12270.765  grad(E)=70.009     E(BOND)=1748.887   E(ANGL)=5560.408   |
+ | E(IMPR)=3208.228   E(VDW )=1713.089   E(CDIH)=0.689      E(NOE )=39.464     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    54 ------ stepsize=    0.0001 -----------------------
+ | Etotal =11831.134  grad(E)=100.050    E(BOND)=1838.311   E(ANGL)=5391.597   |
+ | E(IMPR)=2852.537   E(VDW )=1707.481   E(CDIH)=0.677      E(NOE )=40.531     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2950 intra-atom interactions
+ --------------- cycle=    55 ------ stepsize=    0.0002 -----------------------
+ | Etotal =12355.056  grad(E)=190.435    E(BOND)=1819.550   E(ANGL)=5169.664   |
+ | E(IMPR)=3625.044   E(VDW )=1696.729   E(CDIH)=0.658      E(NOE )=43.411     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    56 ------ stepsize=    0.0001 -----------------------
+ | Etotal =11248.325  grad(E)=89.875     E(BOND)=1688.811   E(ANGL)=5121.710   |
+ | E(IMPR)=2694.056   E(VDW )=1701.740   E(CDIH)=0.670      E(NOE )=41.338     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    57 ------ stepsize=    0.0001 -----------------------
+ | Etotal =10609.689  grad(E)=64.521     E(BOND)=1420.392   E(ANGL)=4855.746   |
+ | E(IMPR)=2591.015   E(VDW )=1700.881   E(CDIH)=0.671      E(NOE )=40.984     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    58 ------ stepsize=    0.0001 -----------------------
+ | Etotal =10309.244  grad(E)=76.216     E(BOND)=1283.668   E(ANGL)=4747.540   |
+ | E(IMPR)=2536.498   E(VDW )=1700.216   E(CDIH)=0.672      E(NOE )=40.650     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    59 ------ stepsize=    0.0001 -----------------------
+ | Etotal =9401.370   grad(E)=80.546     E(BOND)=1197.716   E(ANGL)=4075.246   |
+ | E(IMPR)=2390.183   E(VDW )=1697.508   E(CDIH)=0.682      E(NOE )=40.035     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    60 ------ stepsize=    0.0001 -----------------------
+ | Etotal =13737.038  grad(E)=462.346    E(BOND)=1254.386   E(ANGL)=3955.345   |
+ | E(IMPR)=6789.841   E(VDW )=1696.860   E(CDIH)=0.686      E(NOE )=39.920     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    61 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9399.832   grad(E)=80.668     E(BOND)=1197.980   E(ANGL)=4073.677   |
+ | E(IMPR)=2389.959   E(VDW )=1697.501   E(CDIH)=0.682      E(NOE )=40.034     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    62 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9340.109   grad(E)=88.162     E(BOND)=1218.983   E(ANGL)=4002.289   |
+ | E(IMPR)=2381.034   E(VDW )=1697.151   E(CDIH)=0.684      E(NOE )=39.968     |
+ -------------------------------------------------------------------------------
+ NBONDS: found     2955 intra-atom interactions
+ --------------- cycle=    63 ------ stepsize=    0.0001 -----------------------
+ | Etotal =12710.417  grad(E)=274.508    E(BOND)=1314.631   E(ANGL)=3305.361   |
+ | E(IMPR)=6353.905   E(VDW )=1696.494   E(CDIH)=0.701      E(NOE )=39.326     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    64 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9218.003   grad(E)=82.250     E(BOND)=1210.304   E(ANGL)=3913.916   |
+ | E(IMPR)=2353.076   E(VDW )=1700.125   E(CDIH)=0.686      E(NOE )=39.896     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    65 ------ stepsize=    0.0001 -----------------------
+ | Etotal =12934.727  grad(E)=354.165    E(BOND)=1216.582   E(ANGL)=3519.241   |
+ | E(IMPR)=6460.451   E(VDW )=1698.196   E(CDIH)=0.693      E(NOE )=39.564     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    66 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9193.901   grad(E)=81.110     E(BOND)=1208.924   E(ANGL)=3896.537   |
+ | E(IMPR)=2347.824   E(VDW )=1700.048   E(CDIH)=0.686      E(NOE )=39.881     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    67 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13201.676  grad(E)=418.197    E(BOND)=1202.381   E(ANGL)=3690.172   |
+ | E(IMPR)=6569.628   E(VDW )=1699.095   E(CDIH)=0.689      E(NOE )=39.711     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    68 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9188.483   grad(E)=80.855     E(BOND)=1208.628   E(ANGL)=3892.611   |
+ | E(IMPR)=2346.649   E(VDW )=1700.031   E(CDIH)=0.686      E(NOE )=39.878     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    69 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13372.054  grad(E)=459.163    E(BOND)=1203.013   E(ANGL)=3787.539   |
+ | E(IMPR)=6641.467   E(VDW )=1699.556   E(CDIH)=0.688      E(NOE )=39.792     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    70 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9187.192   grad(E)=80.794     E(BOND)=1208.559   E(ANGL)=3891.674   |
+ | E(IMPR)=2346.370   E(VDW )=1700.026   E(CDIH)=0.686      E(NOE )=39.878     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    71 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13466.635  grad(E)=482.552    E(BOND)=1205.173   E(ANGL)=3838.712   |
+ | E(IMPR)=6682.439   E(VDW )=1699.789   E(CDIH)=0.687      E(NOE )=39.834     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    72 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9186.877   grad(E)=80.779     E(BOND)=1208.542   E(ANGL)=3891.445   |
+ | E(IMPR)=2346.301   E(VDW )=1700.025   E(CDIH)=0.686      E(NOE )=39.877     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    73 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13516.334  grad(E)=495.088    E(BOND)=1206.706   E(ANGL)=3864.864   |
+ | E(IMPR)=6704.316   E(VDW )=1699.907   E(CDIH)=0.686      E(NOE )=39.856     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    74 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9186.799   grad(E)=80.775     E(BOND)=1208.537   E(ANGL)=3891.389   |
+ | E(IMPR)=2346.284   E(VDW )=1700.025   E(CDIH)=0.686      E(NOE )=39.877     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    75 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13541.797  grad(E)=501.583    E(BOND)=1207.584   E(ANGL)=3878.073   |
+ | E(IMPR)=6715.622   E(VDW )=1699.966   E(CDIH)=0.686      E(NOE )=39.866     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    76 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9186.779   grad(E)=80.774     E(BOND)=1208.536   E(ANGL)=3891.375   |
+ | E(IMPR)=2346.280   E(VDW )=1700.025   E(CDIH)=0.686      E(NOE )=39.877     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    77 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13554.684  grad(E)=504.890    E(BOND)=1208.051   E(ANGL)=3884.711   |
+ | E(IMPR)=6721.369   E(VDW )=1699.995   E(CDIH)=0.686      E(NOE )=39.872     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    78 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9186.775   grad(E)=80.774     E(BOND)=1208.536   E(ANGL)=3891.371   |
+ | E(IMPR)=2346.279   E(VDW )=1700.025   E(CDIH)=0.686      E(NOE )=39.877     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    79 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.166  grad(E)=506.559    E(BOND)=1208.291   E(ANGL)=3888.038   |
+ | E(IMPR)=6724.266   E(VDW )=1700.010   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    80 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9186.773   grad(E)=80.774     E(BOND)=1208.536   E(ANGL)=3891.370   |
+ | E(IMPR)=2346.279   E(VDW )=1700.025   E(CDIH)=0.686      E(NOE )=39.877     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    81 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9184.477   grad(E)=80.665     E(BOND)=1208.413   E(ANGL)=3889.703   |
+ | E(IMPR)=2345.782   E(VDW )=1700.018   E(CDIH)=0.686      E(NOE )=39.876     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    82 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9183.331   grad(E)=80.611     E(BOND)=1208.352   E(ANGL)=3888.870   |
+ | E(IMPR)=2345.534   E(VDW )=1700.014   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    83 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.758   grad(E)=80.584     E(BOND)=1208.321   E(ANGL)=3888.454   |
+ | E(IMPR)=2345.410   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    84 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.572  grad(E)=506.664    E(BOND)=1208.306   E(ANGL)=3888.246   |
+ | E(IMPR)=6724.448   E(VDW )=1700.011   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    85 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.758   grad(E)=80.584     E(BOND)=1208.321   E(ANGL)=3888.454   |
+ | E(IMPR)=2345.410   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    86 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.775  grad(E)=506.716    E(BOND)=1208.314   E(ANGL)=3888.350   |
+ | E(IMPR)=6724.539   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    87 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.758   grad(E)=80.584     E(BOND)=1208.321   E(ANGL)=3888.454   |
+ | E(IMPR)=2345.410   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    88 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.876  grad(E)=506.742    E(BOND)=1208.318   E(ANGL)=3888.402   |
+ | E(IMPR)=6724.584   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    89 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.758   grad(E)=80.584     E(BOND)=1208.321   E(ANGL)=3888.454   |
+ | E(IMPR)=2345.410   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    90 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.758   grad(E)=80.584     E(BOND)=1208.321   E(ANGL)=3888.454   |
+ | E(IMPR)=2345.410   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    91 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.722   grad(E)=80.583     E(BOND)=1208.319   E(ANGL)=3888.428   |
+ | E(IMPR)=2345.402   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    92 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.902  grad(E)=506.749    E(BOND)=1208.318   E(ANGL)=3888.415   |
+ | E(IMPR)=6724.596   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    93 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.722   grad(E)=80.583     E(BOND)=1208.319   E(ANGL)=3888.428   |
+ | E(IMPR)=2345.402   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    94 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.713   grad(E)=80.582     E(BOND)=1208.319   E(ANGL)=3888.421   |
+ | E(IMPR)=2345.400   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    95 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.908  grad(E)=506.750    E(BOND)=1208.319   E(ANGL)=3888.418   |
+ | E(IMPR)=6724.598   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    96 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.713   grad(E)=80.582     E(BOND)=1208.319   E(ANGL)=3888.421   |
+ | E(IMPR)=2345.400   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    97 ------ stepsize=    0.0000 -----------------------
+ | Etotal =13561.911  grad(E)=506.751    E(BOND)=1208.319   E(ANGL)=3888.420   |
+ | E(IMPR)=6724.600   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    98 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.713   grad(E)=80.582     E(BOND)=1208.319   E(ANGL)=3888.421   |
+ | E(IMPR)=2345.400   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=    99 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.713   grad(E)=80.582     E(BOND)=1208.319   E(ANGL)=3888.421   |
+ | E(IMPR)=2345.400   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ --------------- cycle=   100 ------ stepsize=    0.0000 -----------------------
+ | Etotal =9182.712   grad(E)=80.582     E(BOND)=1208.319   E(ANGL)=3888.421   |
+ | E(IMPR)=2345.400   E(VDW )=1700.012   E(CDIH)=0.686      E(NOE )=39.875     |
+ -------------------------------------------------------------------------------
+ POWELL: STEP number limit. Normal termination
+ POWELL: Current coordinates set to last minimum
+ CNSsolve> 
+ CNSsolve>  display $1 $3 $4 $vdw $noe $bond $angl $cdih $impr $temp 
+ %WDSUB-ERR: symbol not found:
+   display $1 $3 $4 $vdw $noe $bond $angl $cdih $impr $temp 
+                                                      ^^^^^
+0.1125 2 2 1700.01 39.8748 1208.32 3888.42 0.685908 2345.4 $temp
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>write coordinates selection=( resid 20:25 ) end 
+ SELRPN:     87 atoms have been selected out of    436
+ CWRITE: using atom subset.
+REMARK FILENAME="OUTPUT"
+REMARK SS restraints for CMTI
+REMARK DATE:07-Nov-2011  11:02:31       created by user: brunger
+REMARK VERSION:1.3
+ATOM    304  N   CYS    20      -3.913  -3.004  -2.561  0.00  0.00      cmti
+ATOM    305  HN  CYS    20      -4.273  -3.284  -1.700  0.00  0.00      cmti
+ATOM    306  CA  CYS    20      -2.914  -1.902  -2.568  0.00  0.00      cmti
+ATOM    307  HA  CYS    20      -3.177  -1.233  -3.380  0.00  0.00      cmti
+ATOM    308  HB1 CYS    20      -1.872  -0.689  -1.159  1.00  0.00      cmti
+ATOM    309  HB2 CYS    20      -3.087  -1.726  -0.426  1.00  0.00      cmti
+ATOM    310  C   CYS    20      -1.561  -2.482  -2.850  0.00  0.00      cmti
+ATOM    311  O   CYS    20      -1.327  -3.685  -2.678  0.00  0.00      cmti
+ATOM    312  CB  CYS    20      -2.868  -1.090  -1.263  0.00  0.00      cmti
+ATOM    313  SG  CYS    20      -4.012   0.319  -1.214  0.00  0.00      cmti
+ATOM    314  N   VAL    21      -0.655  -1.615  -3.214  0.00  0.00      cmti
+ATOM    315  HN  VAL    21      -0.853  -0.658  -3.175  0.00  0.00      cmti
+ATOM    316  CA  VAL    21       0.614  -2.054  -3.713  0.00  0.00      cmti
+ATOM    317  HA  VAL    21       0.868  -3.001  -3.261  0.00  0.00      cmti
+ATOM    318  CB  VAL    21       0.167  -2.277  -5.276  0.00  0.00      cmti
+ATOM    319  HB  VAL    21       0.654  -2.472  -5.432  0.00  0.00      cmti
+ATOM    320  CG1 VAL    21       0.771  -1.032  -6.099  0.00  0.00      cmti
+ATOM    321 HG11 VAL    21       1.714  -0.705  -5.688  1.00  0.00      cmti
+ATOM    322 HG12 VAL    21       0.054  -0.218  -6.017  1.00  0.00      cmti
+ATOM    323 HG13 VAL    21       0.882  -1.289  -7.142  1.00  0.00      cmti
+ATOM    324  CG2 VAL    21       0.152  -3.787  -5.796  0.00  0.00      cmti
+ATOM    325 HG21 VAL    21       0.556  -4.456  -5.056  1.00  0.00      cmti
+ATOM    326 HG22 VAL    21       0.693  -3.880  -6.717  1.00  0.00      cmti
+ATOM    327 HG23 VAL    21      -0.895  -4.048  -5.976  1.00  0.00      cmti
+ATOM    328  C   VAL    21       1.713  -0.995  -3.376  0.00  0.00      cmti
+ATOM    329  O   VAL    21       1.481   0.213  -3.499  0.00  0.00      cmti
+ATOM    330  N   CYS    22       2.871  -1.459  -2.861  0.00  0.00      cmti
+ATOM    331  HN  CYS    22       2.982  -2.423  -2.742  0.00  0.00      cmti
+ATOM    332  CA  CYS    22       3.982  -0.566  -2.480  0.00  0.00      cmti
+ATOM    333  HA  CYS    22       3.600   0.150  -1.765  0.00  0.00      cmti
+ATOM    334  HB1 CYS    22       5.844  -1.663  -2.555  1.00  0.00      cmti
+ATOM    335  HB2 CYS    22       4.698  -2.271  -1.367  1.00  0.00      cmti
+ATOM    336  C   CYS    22       4.501   0.199  -3.704  0.00  0.00      cmti
+ATOM    337  O   CYS    22       5.219  -0.372  -4.534  0.00  0.00      cmti
+ATOM    338  CB  CYS    22       5.118  -1.379  -1.810  0.00  0.00      cmti
+ATOM    339  SG  CYS    22       6.002  -0.504  -0.487  0.00  0.00      cmti
+ATOM    340  N   LEU    23       4.108   1.513  -3.812  0.00  0.00      cmti
+ATOM    341  HN  LEU    23       3.574   1.901  -3.113  0.00  0.00      cmti
+ATOM    342  CA  LEU    23       4.535   2.367  -4.966  0.00  0.00      cmti
+ATOM    343  HA  LEU    23       4.238   1.852  -5.858  0.00  0.00      cmti
+ATOM    344  CB  LEU    23       4.090   4.011  -4.937  0.00  0.00      cmti
+ATOM    345  HB1 LEU    23       4.797   4.370  -5.539  1.00  0.00      cmti
+ATOM    346  HB2 LEU    23       4.222   4.276  -3.924  1.00  0.00      cmti
+ATOM    347  CG  LEU    23       2.619   4.584  -5.399  0.00  0.00      cmti
+ATOM    348  HG  LEU    23       2.867   3.631  -5.649  0.00  0.00      cmti
+ATOM    349  CD1 LEU    23       1.698   3.676  -6.261  0.00  0.00      cmti
+ATOM    350 HD11 LEU    23       0.793   3.346  -5.681  1.00  0.00      cmti
+ATOM    351 HD12 LEU    23       2.266   2.612  -6.163  1.00  0.00      cmti
+ATOM    352 HD13 LEU    23       1.581   3.948  -7.271  1.00  0.00      cmti
+ATOM    353  CD2 LEU    23       1.724   4.767  -4.097  0.00  0.00      cmti
+ATOM    354 HD21 LEU    23       0.651   4.621  -4.313  1.00  0.00      cmti
+ATOM    355 HD22 LEU    23       1.872   5.747  -3.805  1.00  0.00      cmti
+ATOM    356 HD23 LEU    23       2.046   4.072  -3.327  1.00  0.00      cmti
+ATOM    357  C   LEU    23       6.095   2.375  -4.907  0.00  0.00      cmti
+ATOM    358  O   LEU    23       6.714   2.095  -3.868  0.00  0.00      cmti
+ATOM    359  N   GLU    24       6.732   2.703  -6.046  0.00  0.00      cmti
+ATOM    360  HN  GLU    24       6.196   2.848  -6.853  0.00  0.00      cmti
+ATOM    361  CA  GLU    24       8.203   2.824  -6.144  0.00  0.00      cmti
+ATOM    362  HA  GLU    24       8.626   1.833  -6.160  0.00  0.00      cmti
+ATOM    363  CB  GLU    24       8.560   3.559  -7.468  0.00  0.00      cmti
+ATOM    364  HB1 GLU    24       8.196   4.575  -7.402  1.00  0.00      cmti
+ATOM    365  HB2 GLU    24       8.042   3.064  -8.279  1.00  0.00      cmti
+ATOM    366  CG  GLU    24      10.059   3.608  -7.826  0.00  0.00      cmti
+ATOM    367  HG1 GLU    24      10.153   3.782  -8.888  1.00  0.00      cmti
+ATOM    368  HG2 GLU    24      10.505   2.656  -7.583  1.00  0.00      cmti
+ATOM    369  CD  GLU    24      10.841   4.702  -7.093  0.00  0.00      cmti
+ATOM    370  OE1 GLU    24      11.850   4.366  -6.431  0.00  0.00      cmti
+ATOM    371  OE2 GLU    24      10.451   5.888  -7.183  0.00  0.00      cmti
+ATOM    372  C   GLU    24       8.783   3.601  -4.937  0.00  0.00      cmti
+ATOM    373  O   GLU    24       9.935   3.396  -4.543  0.00  0.00      cmti
+ATOM    374  N   HIS    25       7.946   4.457  -4.330  0.00  0.00      cmti
+ATOM    375  HN  HIS    25       7.019   4.505  -4.643  0.00  0.00      cmti
+ATOM    376  CA  HIS    25       8.347   5.310  -3.203  0.00  0.00      cmti
+ATOM    377  HA  HIS    25       9.296   5.751  -3.460  0.00  0.00      cmti
+ATOM    378  CB  HIS    25       7.318   6.443  -3.042  0.00  0.00      cmti
+ATOM    379  HB1 HIS    25       7.539   6.998  -2.143  1.00  0.00      cmti
+ATOM    380  HB2 HIS    25       6.330   6.010  -2.954  1.00  0.00      cmti
+ATOM    381  CG  HIS    25       7.298   7.413  -4.202  0.00  0.00      cmti
+ATOM    382  ND1 HIS    25       8.139   8.507  -4.288  0.00  0.00      cmti
+ATOM    383  HD1 HIS    25       8.808   8.766  -3.622  0.00  0.00      cmti
+ATOM    384  CD2 HIS    25       6.529   7.448  -5.326  0.00  0.00      cmti
+ATOM    385  HD2 HIS    25       5.750   6.748  -5.592  0.00  0.00      cmti
+ATOM    386  CE1 HIS    25       7.902   9.160  -5.417  0.00  0.00      cmti
+ATOM    387  HE1 HIS    25       8.419  10.045  -5.755  0.00  0.00      cmti
+ATOM    388  NE2 HIS    25       6.929   8.540  -6.061  0.00  0.00      cmti
+ATOM    389  C   HIS    25       8.525   4.522  -1.890  0.00  0.00      cmti
+ATOM    390  O   HIS    25       9.587   4.595  -1.265  0.00  0.00      cmti
+END
+ CNSsolve>stop 
+          ============================================================
+           Maximum dynamic memory allocation:     8806776 bytes
+           Maximum dynamic memory overhead:          1616 bytes
+           Program started at: 11:02:31 on 07-Nov-2011
+           Program stopped at: 11:02:31 on 07-Nov-2011
+           CPU time used:       0.2057 seconds
+          ============================================================

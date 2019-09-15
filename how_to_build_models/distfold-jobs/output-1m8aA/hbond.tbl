@@ -1,0 +1,7 @@
+assign (resid  50 and name O) (resid  54 and name H) 2.12 0.20 0.10 !helix
+assign (resid  51 and name O) (resid  55 and name H) 2.12 0.20 0.10 !helix
+assign (resid  52 and name O) (resid  56 and name H) 2.12 0.20 0.10 !helix
+assign (resid  53 and name O) (resid  57 and name H) 2.12 0.20 0.10 !helix
+assign (resid  54 and name O) (resid  58 and name H) 2.12 0.20 0.10 !helix
+assign (resid  55 and name O) (resid  59 and name H) 2.12 0.20 0.10 !helix
+assign (resid  56 and name O) (resid  60 and name H) 2.12 0.20 0.10 !helix

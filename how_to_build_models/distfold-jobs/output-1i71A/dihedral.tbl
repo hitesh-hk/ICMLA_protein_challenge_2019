@@ -1,0 +1,14 @@
+assign (resid  16 and name n) (resid  16 and name ca) (resid  16 and name  c) (resid  17 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  16 and name c) (resid  17 and name  n) (resid  17 and name ca) (resid  17 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  22 and name n) (resid  22 and name ca) (resid  22 and name  c) (resid  23 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  22 and name c) (resid  23 and name  n) (resid  23 and name ca) (resid  23 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  61 and name n) (resid  61 and name ca) (resid  61 and name  c) (resid  62 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  61 and name c) (resid  62 and name  n) (resid  62 and name ca) (resid  62 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  62 and name n) (resid  62 and name ca) (resid  62 and name  c) (resid  63 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  62 and name c) (resid  63 and name  n) (resid  63 and name ca) (resid  63 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  63 and name n) (resid  63 and name ca) (resid  63 and name  c) (resid  64 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  63 and name c) (resid  64 and name  n) (resid  64 and name ca) (resid  64 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  71 and name n) (resid  71 and name ca) (resid  71 and name  c) (resid  72 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  71 and name c) (resid  72 and name  n) (resid  72 and name ca) (resid  72 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  72 and name n) (resid  72 and name ca) (resid  72 and name  c) (resid  73 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  72 and name c) (resid  73 and name  n) (resid  73 and name ca) (resid  73 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi

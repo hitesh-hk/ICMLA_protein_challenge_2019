@@ -1,0 +1,7 @@
+assign (resid  16 and name  O) (resid  17 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  22 and name  O) (resid  23 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  61 and name  O) (resid  62 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  62 and name  O) (resid  63 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  63 and name  O) (resid  64 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  71 and name  O) (resid  72 and name  O) 4.65 0.20 0.10 !unpaired E residue
+assign (resid  72 and name  O) (resid  73 and name  O) 4.65 0.20 0.10 !unpaired E residue

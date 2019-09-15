@@ -1,0 +1,1900 @@
+          ============================================================
+          |                                                          |
+          |            Crystallography & NMR System (CNS)            |
+          |                         CNSsolve                         |
+          |                                                          |
+          ============================================================
+           Version: 1.3
+           Status: General release
+          ============================================================
+           Written by: A.T.Brunger, P.D.Adams, G.M.Clore, W.L.DeLano,
+                       P.Gros, R.W.Grosse-Kunstleve,J.-S.Jiang,J.M.Krahn,
+                       J.Kuszewski, M.Nilges, N.S.Pannu, R.J.Read,
+                       L.M.Rice, G.F.Schroeder, T.Simonson, G.L.Warren.
+           Copyright (c) 1997-2010 Yale University
+          ============================================================
+           Running on machine: atbmac2.stanford.edu (Mac/Intel,64-bit)
+                               with  4 threads
+           Program started by: brunger
+           Program started at: 11:03:08 on 07-Nov-2011
+          ============================================================
+
+ FFT3C: Using FFTPACK4.1
+
+ CNSsolve>remarks   XRAY 
+ CNSsolve>remarks   test for xray 
+ CNSsolve> 
+ CNSsolve>structure 
+ STRUcture>data_cns_mtf 
+ REMARKS FILENAME="/data/rwgk/test/tmp.mtf"
+ REMARKS HBUILD.INP
+ REMARKS build hydrogens for GAL11 structure
+ REMARKS DATE:18-Nov-98  14:17:57       created by user: rwgk
+ REMARKS VERSION:0.4a
+ Status of internal molecular topology database:
+ -> NATOM=        648(MAXA=     1000000)  NBOND=        655(MAXB=     1000000)
+ -> NTHETA=      1183(MAXT=     2000000)  NGRP=         264(MAXGRP=   1000000)
+ -> NPHI=         317(MAXP=     2000000)  NIMPHI=       143(MAXIMP=   1000000)
+ -> NNB=            9(MAXNB=    1000000) 
+ STRUcture> 
+ STRUcture>end 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>coor 
+ COOR>REMARK FILENAME="" 
+ COOR>REMARK HBUILD.INP The crystal structure with protons built on 
+ COOR>REMARK build hydrogens 
+ COOR>REMARK DATE: 8-OCT-85  13:41:30       created by user: CLORE 
+ COOR>ATOM      1  N   THR     1      17.047  14.099   3.625  0.00 13.79 
+ COOR>ATOM      2  HT1 THR     1      16.206  14.668   3.850  0.00  0.00 
+ CNSsolve> 
+ CNSsolve>delete selection=( hydrogen ) end 
+ SELRPN:    321 atoms have been selected out of    648
+ Status of internal molecular topology database:
+ -> NATOM=        327(MAXA=     1000000)  NBOND=        334(MAXB=     1000000)
+ -> NTHETA=       460(MAXT=     2000000)  NGRP=         264(MAXGRP=   1000000)
+ -> NPHI=         209(MAXP=     2000000)  NIMPHI=        81(MAXIMP=   1000000)
+ -> NNB=            9(MAXNB=    1000000) 
+ CNSsolve> 
+ CNSsolve>do (q=1) ( all ) 
+ SELRPN:    327 atoms have been selected out of    327
+ CNSsolve> 
+ CNSsolve>parameter 
+ PARRDR>remarks   PARAMETER FILE FOR ALL EXPLICIT HYDROGENS BASED ON CFF PARAMETERS 
+ PARRDR>remarks   IN BRUCE GELIN'S THESIS (PARMFIX7 VALUES HAVE TRAILING 0'S) 
+ PARRDR>remarks   BOND ANGLE PARAMETERS INCLUDE THE HARMONIC CONTRIBUTION FROM UREY-BRADLEY 
+ PARRDR>remarks   F TERM ( (R13-R0)^2 ) 
+ PARRDR>remarks   DIHEDRALS INCLUDE MULTIPLICITY FROM CFF 
+ PARRDR>remarks   MODIFIED TO INCLUDE HA AND CT 
+ PARRDR>remarks   HIS AND TRYP INCLUDED 4/13/80 DJS 
+ PARRDR>set echo=false end 
+ PARRDR>end 
+ CNSsolve> 
+ CNSsolve>{* ============================================================= *} 
+ CNSsolve>{* ============================================================= *} 
+ CNSsolve> 
+ CNSsolve>xray 
+ XRAY>   declare name=fobs type=complex domain=reciprocal end 
+ XDECLARE: Object FOBS has been declared.
+ XRAY>   declare name=fpart domain=reciprocal type=complex end 
+ XDECLARE: Object FPART has been declared.
+ XRAY>   declare name=fcalc domain=reciprocal type=complex end 
+ XDECLARE: Object FCALC has been declared.
+ XRAY>   declare name=fom domain=reciprocal type=real end 
+ XDECLARE: Object FOM has been declared.
+ XRAY>   declare name=weight domain=reciprocal type=real end 
+ XDECLARE: Object WEIGHT has been declared.
+ XRAY>   declare name=sigma domain=reciprocal type=real end 
+ XDECLARE: Object SIGMA has been declared.
+ XRAY>   declare name=test domain=reciprocal type=integer end 
+ XDECLARE: Object TEST has been declared.
+ XRAY> 
+ XRAY>   a=40.96 b=18.65 c=22.52 alpha=90.0 beta=90.77 gamma=90.0 
+ XRAY>   symmetry=(x,y,z)         !! 
+ XRAY>   symmetry=(-x,y+1/2,-z)   !! this is P21, b axis unique 
+ XRAY> 
+ XRAY>  evaluate ($lr=10.) 
+ EVALUATE: symbol $LR set to    10.0000     (real)
+ XRAY>  evaluate ($hr=3.) 
+ EVALUATE: symbol $HR set to    3.00000     (real)
+ XRAY>  binresolution $lr $hr 
+ XRAY>  mapresolution $hr 
+ XRAY>  tselection=( $hr <= d <= $lr and 0.01 <= amplitude(fobs) ) 
+ XRAY> 
+ XRAY>   SCATter ( chemical C* ) 
+ SELRPN:    202 atoms have been selected out of    327
+ SCATTER_A1=   2.31000 20.8439 1.02000 10.2075 1.58860 .568700 .865000 51.6512 .215600 
+ XRAY> 
+ XRAY>   SCATter ( chemical N* ) 
+ SELRPN:     55 atoms have been selected out of    327
+ SCATTER_A1=   12.2126 .005700 3.13220 9.89330 2.01250 28.9975 1.16630 .582600 -11.529 
+ XRAY> 
+ XRAY>   SCATter ( chemical O* ) 
+ SELRPN:     64 atoms have been selected out of    327
+ SCATTER_A1=   3.04850 13.2771 2.28680 5.70110 1.54630 .323900 .867000 32.9089 .250800 
+ XRAY> 
+ XRAY>   SCATter ( chemical S* ) 
+ SELRPN:      6 atoms have been selected out of    327
+ SCATTER_A1=   6.90530 1.46790 5.20340 22.2151 1.43790 .253600 1.58630 56.1720 .866900 
+ XRAY> 
+ XRAY>   nreflections=1000 
+ XRAY: allocating space for    1000 reflections.
+ XRAY> reflections 
+ REFLection> INDEx    0   2   0  Fobs  4171.8999 
+ XSFAL: allocating space for complex reciprocal space object.
+ XRRR2:      729 new h,k,l indices have been added.
+ XRAY>   do (fpart=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of       729 structure factor elements were selected.
+ XRAY> 
+ XRAY>   set timer=1 end 
+ XRAY>   ? 
+ ---------------------------diffraction-data-----------------------------------
+ | a= 40.96, b= 18.65, c= 22.52, alpha= 90.00, beta= 90.77, gamma= 90.00
+ | ANOMalous=FALSe
+ | Number or unique reflections read=   729
+ | resolution range covered by these reflections:       9.94 to       3.00
+ | Hmax=   13 Kmax=    6 Lmax=    7 Hmin=  -13 Kmin=    0 Lmin=    0
+ ------------------------------------------------------------------------------
+ XRAY> 
+ XRAY>   tolerance=0.0 
+ XRAY>   method=fft 
+ XRAY>   FFT memory=3000  prime=5 avoid=2 end 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not hydro ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:    327 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    327 #anomalous=   0 #special pos.=  0 occupancies=1
+ XSFAL: allocating space for complex reciprocal space object.
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0025
+ XFFT: CPU-time:  FFT of electron density=    0.0004
+ XFFT: CPU-time:  transformation into A, B=    0.0004
+ XPRED: CPU-time:  predict-calc=    0.0069
+ XRAY>   print target 
+ XRTSELSET: number of selected reflections     723
+ XTAREXPR:                 monitor=  0.266
+ TARGET value (working set)=        0.09246
+ XRAY>   FFT memory=300000 end 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not hydro ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:    327 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    327 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0007
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0002
+ XPRED: CPU-time:  predict-calc=    0.0048
+ XRAY>   print target 
+ XTAREXPR:                 monitor=  0.266
+ TARGET value (working set)=        0.09246
+ XRAY>   tolerance=0.0 
+ XRAY> 
+ XRAY>   statistics 
+ STATistics>      completeness 
+ STATistics>      selection=( $hr <= d <= $lr and 0.01 <= amplitude(fobs) ) 
+ Total of       723 structure factor elements were selected.
+ STATistics>      output=OUTPUT 
+ STATistics>  end 
+ #bin | resolution range | #refl | 
+    1   5.66   10.00         94      0.9792
+    2   4.64    5.66         91      0.9891
+    3   4.10    4.64         98      1.0000
+    4   3.75    4.10         77      0.9872
+    5   3.49    3.75         98      0.9899
+    6   3.29    3.49         85      1.0000
+    7   3.13    3.29         86      1.0000
+    8   3.00    3.13         94      0.9895
+ XRAY>  display $expression1 
+0.989474
+ XRAY> 
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve>{* test fpartial calculation *} 
+ CNSsolve>flags excl * incl xref end 
+ CNSsolve>energy end 
+ ENERGY: at entry  CPU=    0.092316 sec.
+ FCALC: #scatt.=    327 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0006
+ XFFT: CPU-time:  FFT of electron density=    0.0002
+ XFFT: CPU-time:  transformation into A, B=    0.0002
+ XTAREXPR:                 monitor=  0.266
+ XFFT: CPU-time:  electron-density-calc=    0.0016
+ XFFT: CPU-time:  FFT of electron density=    0.0006
+ XFFT: CPU-time:  transformation into A, B=    0.0004
+ ENERGY: after ALL terms  CPU=    0.103916 sec.
+ --------------- cycle=     1 --------------------------------------------------
+ | Etotal =0.092      grad(E)=0.001      E(XREF)=0.092                         |
+ -------------------------------------------------------------------------------
+ CNSsolve>display  $xref 
+ 9.246159E-02
+ CNSsolve>show elem ( dx ) ( resid 1 ) 
+ SELRPN:      7 atoms have been selected out of    327
+ (      THR  1    N    )   0.34085E-03
+ (      THR  1    CA   )  -0.44995E-03
+ (      THR  1    CB   )   0.75053E-03
+ (      THR  1    OG1  )   0.11303E-02
+ (      THR  1    CG2  )   0.29503E-03
+ (      THR  1    C    )  -0.84150E-03
+ (      THR  1    O    )  -0.11030E-02
+ CNSsolve> 
+ CNSsolve>xray 
+ XRAY>   associate fcalc ( resid 2:5 ) 
+ SELRPN:     26 atoms have been selected out of    327
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all )  atomselection=( resid 2:5 ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:     26 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=     26 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0001
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0002
+ XPRED: CPU-time:  predict-calc=    0.0027
+ XRAY>   print target 
+ XTAREXPR:                 monitor=  0.593
+ TARGET value (working set)=        0.44825
+ XRAY>   do ( fpart = fcalc ) ( all ) 
+ Total of       729 structure factor elements were selected.
+ XRAY>end 
+ CNSsolve>xray 
+ XRAY>   associate fcalc ( not resid 2:5) 
+ SELRPN:    301 atoms have been selected out of    327
+ XRAY>end 
+ CNSsolve>energy end 
+ ENERGY: at entry  CPU=    0.117871 sec.
+ XRTSELSET: number of selected reflections     723
+ FCALC: #scatt.=    301 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0005
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0002
+ XTAREXPR:                 monitor=  0.266
+ XFFT: CPU-time:  electron-density-calc=    0.0006
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0002
+ ENERGY: after ALL terms  CPU=    0.129318 sec.
+ --------------- cycle=     2 --------------------------------------------------
+ | Etotal =0.092      grad(E)=0.001      E(XREF)=0.092                         |
+ -------------------------------------------------------------------------------
+ CNSsolve>show elem ( dx ) ( resid 1 ) 
+ SELRPN:      7 atoms have been selected out of    327
+ (      THR  1    N    )   0.34085E-03
+ (      THR  1    CA   )  -0.44995E-03
+ (      THR  1    CB   )   0.75053E-03
+ (      THR  1    OG1  )   0.11303E-02
+ (      THR  1    CG2  )   0.29503E-03
+ (      THR  1    C    )  -0.84150E-03
+ (      THR  1    O    )  -0.11030E-02
+ CNSsolve>xray 
+ XRAY>  method=direct 
+ XRAY>end 
+ CNSsolve>energy end 
+ ENERGY: at entry  CPU=    0.131993 sec.
+ FCALC: #scatt.=    301 #anomalous=   0 #special pos.=  0 occupancies=1
+ XPRED: CPU-time:  direct structure factor calculation=    0.0281
+ XTAREXPR:                 monitor=  0.266
+ XPRED: CPU-time:  direct structure factor calculation=    0.0459
+ ENERGY: after ALL terms  CPU=    0.235260 sec.
+ --------------- cycle=     3 --------------------------------------------------
+ | Etotal =0.093      grad(E)=0.001      E(XREF)=0.093                         |
+ -------------------------------------------------------------------------------
+ CNSsolve>show elem ( dx ) ( resid 1 ) 
+ SELRPN:      7 atoms have been selected out of    327
+ (      THR  1    N    )   0.25885E-03
+ (      THR  1    CA   )  -0.46370E-03
+ (      THR  1    CB   )   0.80490E-03
+ (      THR  1    OG1  )   0.11012E-02
+ (      THR  1    CG2  )   0.27447E-03
+ (      THR  1    C    )  -0.85848E-03
+ (      THR  1    O    )  -0.11339E-02
+ CNSsolve>xray 
+ XRAY>   method=fft 
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve>xray 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not resid 2:5 ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:    301 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    301 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  40,  18,  24] and sublattice [  40(  41),  18(  19),   6]
+ XFFT: CPU-time:  electron-density-calc=    0.0005
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0016
+ XPRED: CPU-time:  predict-calc=    0.0044
+ XRAY>   print target 
+ XTAREXPR:                 monitor=  0.266
+ TARGET value (working set)=        0.09246
+ XRAY> 
+ XRAY>   evaluate ($lr=10.) 
+ EVALUATE: symbol $LR set to    10.0000     (real)
+ XRAY>   evaluate ($hr=5.66) 
+ EVALUATE: symbol $HR set to    5.66000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY>   tselection=( $hr <= d <= $lr and 0.01 <= amplitude(fobs) ) 
+ XRAY> 
+ XRAY>   fft grid=0.15 end 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not resid 2:5 ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:    301 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    301 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  48,  24,  32] and sublattice [  48(  49),  24(  25),   8]
+ XFFT: CPU-time:  electron-density-calc=    0.0014
+ XFFT: CPU-time:  FFT of electron density=    0.0021
+ XFFT: CPU-time:  transformation into A, B=    0.0018
+ XPRED: CPU-time:  predict-calc=    0.0072
+ XRAY>   print target 
+ XRTSELSET: number of selected reflections      94
+ XTAREXPR:                 monitor=  0.297
+ TARGET value (working set)=        0.11044
+ XRAY> 
+ XRAY>   evaluate ($lr=5.66) 
+ EVALUATE: symbol $LR set to    5.66000     (real)
+ XRAY>   evaluate ($hr=4.64) 
+ EVALUATE: symbol $HR set to    4.64000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY>   tselection=( $hr <= d <= $lr and 0.01 <= amplitude(fobs) ) 
+ XRAY> 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not resid 2:5 ) 
+ Total of       729 structure factor elements were selected.
+ SELRPN:    301 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    301 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  60,  27,  32] and sublattice [  60(  61),  27(  27),   8]
+ XFFT: CPU-time:  electron-density-calc=    0.0019
+ XFFT: CPU-time:  FFT of electron density=    0.0004
+ XFFT: CPU-time:  transformation into A, B=    0.0032
+ XPRED: CPU-time:  predict-calc=    0.0085
+ XRAY>   print target 
+ XRTSELSET: number of selected reflections      91
+ XTAREXPR:                 monitor=  0.224
+ TARGET value (working set)=        0.05950
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>{* test merging of reflections *} 
+ CNSsolve>xray 
+ XRAY>   reset 
+ XRAY: whole xray database erased and reset
+ XRAY>   declare name=fobs type=complex domain=reciprocal end 
+ XDECLARE: Object FOBS has been declared.
+ XRAY>   declare name=fpart domain=reciprocal type=complex end 
+ XDECLARE: Object FPART has been declared.
+ XRAY>   declare name=fcalc domain=reciprocal type=complex end 
+ XDECLARE: Object FCALC has been declared.
+ XRAY>   declare name=fom domain=reciprocal type=real end 
+ XDECLARE: Object FOM has been declared.
+ XRAY>   declare name=weight domain=reciprocal type=real end 
+ XDECLARE: Object WEIGHT has been declared.
+ XRAY>   declare name=sigma domain=reciprocal type=real end 
+ XDECLARE: Object SIGMA has been declared.
+ XRAY>   declare name=test domain=reciprocal type=integer end 
+ XDECLARE: Object TEST has been declared.
+ XRAY> 
+ XRAY>   evaluate ($lr=30.) 
+ EVALUATE: symbol $LR set to    30.0000     (real)
+ XRAY>   evaluate ($hr=0.1) 
+ EVALUATE: symbol $HR set to   0.100000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY> 
+ XRAY>   tselection=( $hr <= d <= $lr ) 
+ XRAY> 
+ XRAY>   hermitian=false 
+ XRAY>   reflection 
+ REFLection>     index 1 2 3 fobs 40.  90. fom 0.5 
+ XSFAL: allocating space for complex reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XRRR2:        6 new h,k,l indices have been added.
+ XRAY>   do (weight=1) ( weight=0 ) 
+ Total of         5 structure factor elements were selected.
+ XRAY>   do (fpart=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         6 structure factor elements were selected.
+ XRAY>   do (fcalc=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         6 structure factor elements were selected.
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of         6 structure factor elements were selected.
+ NREFlection=         6
+ ANOMalous=TRUE { equiv. to HERMitian=FALSe}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1    2    3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2    3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1   -2   -3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     4.000
+ INDE    -2   -3   -4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -4   -5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ XRAY>   reflection 
+ REFLection>     index 1 2 3   fcalc 3. 3.5 fpart 4. 4.5 sigma 3.0 
+ REFLection: data will be merged with existing data.
+ XRRR2:        1 new h,k,l indices have been added.
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all )  end 
+ Total of         7 structure factor elements were selected.
+ NREFlection=         7
+ ANOMalous=TRUE { equiv. to HERMitian=FALSe}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1    2    3 FOBS=    40.000    90.000 FCALC=     3.000     3.500
+                   FPART=     4.000     4.500 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     3.000
+ INDE     2    3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1   -2   -3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     4.000
+ INDE    -2   -3   -4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -4   -5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    2   -5 FOBS=    20.000     0.000 FCALC=     4.000     4.500
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     3.000
+                   SIGMA=     0.000
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve>{* test expand / reduce  *} 
+ CNSsolve> 
+ CNSsolve>xray 
+ XRAY>   reset 
+ XRAY: whole xray database erased and reset
+ XRAY>   declare name=fobs type=complex domain=reciprocal end 
+ XDECLARE: Object FOBS has been declared.
+ XRAY>   declare name=fpart domain=reciprocal type=complex end 
+ XDECLARE: Object FPART has been declared.
+ XRAY>   declare name=fcalc domain=reciprocal type=complex end 
+ XDECLARE: Object FCALC has been declared.
+ XRAY>   declare name=fom domain=reciprocal type=real end 
+ XDECLARE: Object FOM has been declared.
+ XRAY>   declare name=weight domain=reciprocal type=real end 
+ XDECLARE: Object WEIGHT has been declared.
+ XRAY>   declare name=sigma domain=reciprocal type=real end 
+ XDECLARE: Object SIGMA has been declared.
+ XRAY>   declare name=test domain=reciprocal type=integer end 
+ XDECLARE: Object TEST has been declared.
+ XRAY> 
+ XRAY>   evaluate ($lr=30.) 
+ EVALUATE: symbol $LR set to    30.0000     (real)
+ XRAY>   evaluate ($hr=1.) 
+ EVALUATE: symbol $HR set to    1.00000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY> 
+ XRAY>   tselection=( $hr <= d <= $lr ) 
+ XRAY> 
+ XRAY>   a=40. b=40. c=40.   alpha=90.0 beta=90.77 gamma=90.0 
+ XRAY> 
+ XRAY>   hermitian=true 
+ XRAY>   reflection 
+ REFLection>     index 1 2 3 fobs 40.  90. fom 0.5 
+ XSFAL: allocating space for complex reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XRRR2:        9 new h,k,l indices have been added.
+ XRAY>   do (weight=1) ( weight=0 ) 
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XREDU2: multiple instances found for some reflections.
+ XREDU2: deleting redundant reflections.
+ XREDU2:        6 reflections have been deleted.
+ XREDU2: sorting all reflections.
+ Total of         2 structure factor elements were selected.
+ XRAY>   do (fcalc=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         3 structure factor elements were selected.
+ XRAY>   do (fpart=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         3 structure factor elements were selected.
+ XRAY> 
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of         3 structure factor elements were selected.
+ NREFlection=         3
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     4.000
+ INDE     2    3    4 FOBS=    30.000   300.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     3    4    5 FOBS=    20.000   310.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ XRAY> 
+ XRAY>   reset 
+ XRAY: whole xray database erased and reset
+ XRAY>   declare name=fobs type=complex domain=reciprocal end 
+ XDECLARE: Object FOBS has been declared.
+ XRAY>   declare name=fpart domain=reciprocal type=complex end 
+ XDECLARE: Object FPART has been declared.
+ XRAY>   declare name=fcalc domain=reciprocal type=complex end 
+ XDECLARE: Object FCALC has been declared.
+ XRAY>   declare name=fom domain=reciprocal type=real end 
+ XDECLARE: Object FOM has been declared.
+ XRAY>   declare name=weight domain=reciprocal type=real end 
+ XDECLARE: Object WEIGHT has been declared.
+ XRAY>   declare name=sigma domain=reciprocal type=real end 
+ XDECLARE: Object SIGMA has been declared.
+ XRAY>   declare name=test domain=reciprocal type=integer end 
+ XDECLARE: Object TEST has been declared.
+ XRAY> 
+ XRAY>   evaluate ($lr=30.) 
+ EVALUATE: symbol $LR set to    30.0000     (real)
+ XRAY>   evaluate ($hr=1.) 
+ EVALUATE: symbol $HR set to    1.00000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY>   tselection=( $hr <= d <= $lr  ) 
+ XRAY> 
+ XRAY>   a=40. b=40. c=40.     alpha=90.0 beta=90.77 gamma=90.0 
+ XRAY> 
+ XRAY>   symmetry (-x,y+1/2,-z) 
+ XRAY>   reflection 
+ REFLection>     index 1 2 3 fobs 40.  90. fom 0.5 
+ XSFAL: allocating space for complex reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XSFAL: allocating space for real reciprocal space object.
+ XRRR2:        7 new h,k,l indices have been added.
+ XRAY>   do (weight=1 ) ( weight=0) 
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XREDU2: multiple instances found for some reflections.
+ XREDU2: deleting redundant reflections.
+ XREDU2:        4 reflections have been deleted.
+ XREDU2: sorting all reflections.
+ Total of         2 structure factor elements were selected.
+ XRAY>   do (fpart=0) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         3 structure factor elements were selected.
+ XRAY>   do (fcalc=0 ) ( all ) 
+ XSFAL: allocating space for complex reciprocal space object.
+ Total of         3 structure factor elements were selected.
+ XRAY>   do (sigma=0) ( all ) 
+ XSFAL: allocating space for real reciprocal space object.
+ Total of         3 structure factor elements were selected.
+ XRAY> 
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of         3 structure factor elements were selected.
+ NREFlection=         3
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ XRAY> 
+ XRAY>   herm=false 
+ XPARSE: expanding data set (h,k,l)->{(h,k,l),(-h,-k,-l)}
+ XEXPFR2:        3 new reflections have been generated.
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XRAY>   expand 
+ XEXPA2:        6 new reflections have been generated.
+ XRAY: data expanded and symmetry reset to P1.
+ XRAY>   hermitian=true 
+ XPARSE: data will be reduced to hemisphere.          Anomalous signal will be lost.
+ XAVEFRIED: Friedel mates of all recipr. space obj. will be averaged.
+    (also operates on phases and HL coefficients)
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XREDU2: multiple instances found for some reflections.
+ XREDU2: deleting redundant reflections.
+ XREDU2:        6 reflections have been deleted.
+ XREDU2: sorting all reflections.
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of         6 structure factor elements were selected.
+ NREFlection=         6
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1   -2    3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2   -3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     0.000
+ INDE     3   -4    5 FOBS=    20.000   310.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     0.000
+ XRAY> 
+ XRAY>   expand 
+ XEXPA2:        0 new reflections have been generated.
+ XRAY: data expanded and symmetry reset to P1.
+ XRAY>   herm=true 
+ XRAY> 
+ XRAY>   do (sigma=1/s) ( all ) 
+ Total of         6 structure factor elements were selected.
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of         6 structure factor elements were selected.
+ NREFlection=         6
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1   -2    3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     2   -3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     3   -4    5 FOBS=    20.000   310.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ XRAY> 
+ XRAY>   evaluate ($lr=5.8) 
+ EVALUATE: symbol $LR set to    5.80000     (real)
+ XRAY>   evaluate ($hr=5.6) 
+ EVALUATE: symbol $HR set to    5.60000     (real)
+ XRAY>   binresolution $lr $hr 
+ XRAY>   mapresolution $hr 
+ XRAY>   tselection=( $hr <= d <= $lr  ) 
+ XRAY> 
+ XRAY> 
+ XRAY>   {* test generate with already present reflections *} 
+ XRAY>   generate 5.6 5.8 
+ XGENER: existing reflections will be conserved
+         appending new reflections to produce
+         a full set for the specified resolution range
+ XGENE2:       83 new reflections have been generated.
+ XRAY>   do (fobs=1) ( 5.6 <= d <= 5.8 and amplitude(fobs)=0 ) 
+ Total of        83 structure factor elements were selected.
+ XRAY>   do (weight=1) ( weight=0 ) 
+ Total of        83 structure factor elements were selected.
+ XRAY> 
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of        89 structure factor elements were selected.
+ NREFlection=        89
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     1   -2    3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     2   -3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     3   -4    5 FOBS=    20.000   310.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE     7    1    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -7   -1    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     7    0    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -7    1    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -7    1    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     6    3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -6   -3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -6   -2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     6   -2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     6   -3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -6    3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5    5    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5   -5    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5   -4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5    3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5   -3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5   -1    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    1    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5   -3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     5   -4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    5    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -5    5    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4    5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4   -5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4   -4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4    3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4   -3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4   -3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4    3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4   -4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     4   -5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -4    5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3    5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -4    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3   -2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3   -2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3    4    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3   -5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3    5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     3   -6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -2   -6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2    3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -2   -3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2   -3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -2    3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     2   -6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     1    7    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1   -7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1   -5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1   -1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    7    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE    -1    7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0    7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0    7    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0   -7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0    5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0   -5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0    1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0   -1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ INDE     0    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     0.000
+ XRAY> 
+ XRAY>   do (sigma=1/s) ( all ) 
+ Total of        89 structure factor elements were selected.
+ XRAY> 
+ XRAY>   symmetry (-x,y+1/2,-z) 
+ XRAY> 
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XREDU2: multiple instances found for some reflections.
+ XREDU2: deleting redundant reflections.
+ XREDU2:       41 reflections have been deleted.
+ XREDU2: sorting all reflections.
+ Total of        48 structure factor elements were selected.
+ NREFlection=        48
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     7    0    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.714
+ INDE     7    1    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ INDE     5    5    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE     1    7    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.667
+ INDE     7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.646
+ INDE    -7    1    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE    -5    5    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE    -1    7    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.603
+ INDE     0    7    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -6    3    2 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     6    3    2 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -4    5    3 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     4    5    3 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -5    3    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     5    3    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.799
+ INDE     4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.747
+ INDE    -3    5    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     3    5    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE     5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.619
+ INDE    -5    1    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -4    3    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     4    3    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -3    4    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -1    5    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE     0    5    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -2    3    6 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     2    3    6 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.667
+ INDE     0    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.714
+ INDE     1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.646
+ INDE    -1    1    7 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE     0    1    7 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ XRAY> 
+ XRAY>   expand 
+ XEXPA2:       40 new reflections have been generated.
+ XREDUC: some reflection(s) converted to CNS standard asymm. unit.
+ XRAY: data expanded and symmetry reset to P1.
+ XRAY>   hermitian=true 
+ XRAY>   write reflection fobs fcalc fpart fom weight sigma sele=( all ) end 
+ Total of        88 structure factor elements were selected.
+ NREFlection=        88
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FPART                  DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FOM                    DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=WEIGHT                 DOMAin=RECIprocal   TYPE=REAL END
+ DECLare NAME=SIGMA                  DOMAin=RECIprocal   TYPE=REAL END
+ INDE     7    0    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.714
+ INDE     7    1    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ INDE     5    5    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE     1    7    0 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.667
+ INDE     7    0    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.646
+ INDE    -7    1    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE    -5    5    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE    -1    7    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.603
+ INDE     0    7    1 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -6    3    2 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     6    3    2 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     3    6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     6    2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     5    4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -4    5    3 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     4    5    3 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     2    6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -5    3    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     5    3    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.799
+ INDE     4    4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.747
+ INDE    -3    5    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     3    5    4 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE     5    0    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.619
+ INDE    -5    1    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -4    3    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     4    3    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -3    4    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -1    5    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE     0    5    5 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     3    2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -2    3    6 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     2    3    6 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.667
+ INDE     0    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.714
+ INDE     1    0    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.646
+ INDE    -1    1    7 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE     0    1    7 FOBS=     1.000   180.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ INDE    -7    1    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ INDE    -5    5    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -1    7    0 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -7   -1    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE    -5   -5    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE    -1   -7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.603
+ INDE     0   -7    1 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -6   -3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     6   -3    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -3   -6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     3   -6    2 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -6   -2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     1   -2    3 FOBS=    40.000    90.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.500 WEIGHT=     1.000
+                   SIGMA=    10.659
+ INDE     6   -2    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -5   -4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     5   -4    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -4   -5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     4   -5    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -2   -6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.724
+ INDE     2   -6    3 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.705
+ INDE    -5   -3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     2   -3    4 FOBS=    30.000    60.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.400 WEIGHT=     1.400
+                   SIGMA=     7.400
+ INDE     5   -3    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -4   -4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.799
+ INDE     4   -4    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.747
+ INDE    -3   -5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.675
+ INDE     3   -5    4 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -5   -1    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.638
+ INDE    -4   -3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.687
+ INDE     4   -3    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.626
+ INDE    -3   -4    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.679
+ INDE     3   -4    5 FOBS=    20.000   310.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.300 WEIGHT=     1.000
+                   SIGMA=     5.634
+ INDE    -1   -5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.608
+ INDE     0   -5    5 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.657
+ INDE    -3   -2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.742
+ INDE     3   -2    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.686
+ INDE    -2   -3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.733
+ INDE     2   -3    6 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.695
+ INDE    -1   -1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.611
+ INDE     0   -1    7 FOBS=     1.000     0.000 FCALC=     0.000     0.000
+                   FPART=     0.000     0.000 FOM=     0.000 WEIGHT=     1.000
+                   SIGMA=     5.656
+ XRAY> 
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve>{* test inclusion of 0,0,0 reflection *} 
+ CNSsolve> 
+ CNSsolve>xray 
+ XRAY>   SCATter ( chemical C* ) 
+ SELRPN:    202 atoms have been selected out of    327
+ SCATTER_A1=   2.31000 20.8439 1.02000 10.2075 1.58860 .568700 .865000 51.6512 .215600 
+ XRAY> 
+ XRAY>   SCATter ( chemical N* ) 
+ SELRPN:     55 atoms have been selected out of    327
+ SCATTER_A1=   12.2126 .005700 3.13220 9.89330 2.01250 28.9975 1.16630 .582600 -11.529 
+ XRAY> 
+ XRAY>   SCATter ( chemical O* ) 
+ SELRPN:     64 atoms have been selected out of    327
+ SCATTER_A1=   3.04850 13.2771 2.28680 5.70110 1.54630 .323900 .867000 32.9089 .250800 
+ XRAY> 
+ XRAY>   SCATter ( chemical S* ) 
+ SELRPN:      6 atoms have been selected out of    327
+ SCATTER_A1=   6.90530 1.46790 5.20340 22.2151 1.43790 .253600 1.58630 56.1720 .866900 
+ XRAY> 
+ XRAY>   evaluate ($lr=100000.) 
+ EVALUATE: symbol $LR set to    100000.     (real)
+ XRAY>   evaluate ($hr=8.) 
+ EVALUATE: symbol $HR set to    8.00000     (real)
+ XRAY> 
+ XRAY>   generate $hr infinity 
+ XGENER: existing reflections will be conserved
+         appending new reflections to produce
+         a full set for the specified resolution range
+ XGENE2:      244 new reflections have been generated.
+ XRAY>   do (fobs=1) ( amplitude(fobs)=0 and $hr <= d ) 
+ Total of       244 structure factor elements were selected.
+ XRAY>   do (weight=1) ( weight=0) 
+ Total of       244 structure factor elements were selected.
+ XRAY>   binresolution $hr infinity 
+ XRAY>   mapresolution $hr 
+ XRAY>   tselection=( $hr <= d ) 
+ XRAY> 
+ XRAY>   predict 
+ PREDict>      mode=reciprocal to=fcalc selection=( all ) atomselection=( not hydro ) 
+ Total of       332 structure factor elements were selected.
+ SELRPN:    327 atoms have been selected out of    327
+ PREDict>   end 
+ FCALC: #scatt.=    327 #anomalous=   0 #special pos.=  0 occupancies=1
+ XFFT: using grid [  15,  15,  16] and sublattice [  15(  15),  15(  15),   4]
+ XFFT: CPU-time:  electron-density-calc=    0.0008
+ XFFT: CPU-time:  FFT of electron density=    0.0001
+ XFFT: CPU-time:  transformation into A, B=    0.0000
+ XPRED: CPU-time:  predict-calc=    0.0025
+ XRAY> 
+ XRAY>   statistics { print r value } 
+ STATistics>      (rvalue(fobs,fcalc+fpart)) 
+ STATistics>      (rvalue[overall](fobs,fcalc+fpart)) 
+ STATistics>      selection=( $hr <= d ) 
+ Total of       246 structure factor elements were selected.
+ STATistics>      output=OUTPUT 
+ STATistics>   end 
+ #bin | resolution range | #refl | 
+    1  16.00 infinity        41      0.7350    0.7339
+    2  12.70   16.00         23      0.5167    0.7339
+    3  11.09   12.70         28      0.5756    0.7339
+    4  10.08   11.09         34      0.8919    0.7339
+    5   9.36   10.08         45      0.6193    0.7339
+    6   8.81    9.36         24      0.6618    0.7339
+    7   8.36    8.81         36      0.6983    0.7339
+    8   8.00    8.36         15      0.7234    0.7339
+ XRAY> 
+ XRAY>   statistics { print phase differences } 
+ STATistics>     (abs(mod(phase(fobs)-phase(fcalc)+540,360) -180.)) 
+ STATistics>     selection=( $hr <= d  ) 
+ Total of       246 structure factor elements were selected.
+ STATistics>      output=OUTPUT 
+ STATistics>   end 
+ #bin | resolution range | #refl | 
+    1  16.00 infinity        41     97.4469
+    2  12.70   16.00         23     82.7126
+    3  11.09   12.70         28     85.6840
+    4  10.08   11.09         34     90.9460
+    5   9.36   10.08         45    106.6672
+    6   8.81    9.36         24     89.9897
+    7   8.36    8.81         36     79.8438
+    8   8.00    8.36         15     84.5011
+ XRAY> 
+ XRAY>   do (fom=1) ( all ) 
+ Total of       332 structure factor elements were selected.
+ XRAY> 
+ XRAY>   statistics 
+ STATistics>      completeness 
+ STATistics>      selection=( $hr <= d ) 
+ Total of       246 structure factor elements were selected.
+ STATistics>      output=OUTPUT 
+ STATistics>   end 
+ #bin | resolution range | #refl | 
+    1  16.00 infinity        41      1.0000
+    2  12.70   16.00         23      1.0000
+    3  11.09   12.70         28      1.0000
+    4  10.08   11.09         34      1.0000
+    5   9.36   10.08         45      1.0000
+    6   8.81    9.36         24      1.0000
+    7   8.36    8.81         36      1.0000
+    8   8.00    8.36         15      1.0000
+ XRAY> 
+ XRAY>   write reflection fobs fcalc sele=( all ) end 
+ Total of       332 structure factor elements were selected.
+ NREFlection=       332
+ ANOMalous=FALSe { equiv. to HERMitian=TRUE}
+ DECLare NAME=FOBS                   DOMAin=RECIprocal   TYPE=COMP END
+ DECLare NAME=FCALC                  DOMAin=RECIprocal   TYPE=COMP END
+ INDE     7    0    0 FOBS=     1.000     0.000 FCALC=   108.740   108.778
+ INDE     7    1    0 FOBS=     1.000   180.000 FCALC=   132.414   206.861
+ INDE     5    5    0 FOBS=     1.000   180.000 FCALC=   197.921    55.637
+ INDE     1    7    0 FOBS=     1.000   180.000 FCALC=   117.498   331.618
+ INDE    -7    0    1 FOBS=     1.000     0.000 FCALC=   188.024   357.349
+ INDE     7    0    1 FOBS=     1.000     0.000 FCALC=   163.137   256.974
+ INDE    -7    1    1 FOBS=     1.000   180.000 FCALC=   112.263    81.960
+ INDE    -5    5    1 FOBS=     1.000   180.000 FCALC=   208.517   343.360
+ INDE    -1    7    1 FOBS=     1.000   180.000 FCALC=   145.560   310.346
+ INDE     0    7    1 FOBS=     1.000   180.000 FCALC=    89.843   221.382
+ INDE    -6    3    2 FOBS=     1.000   180.000 FCALC=   222.696   336.276
+ INDE     6    3    2 FOBS=     1.000   180.000 FCALC=   177.911   350.745
+ INDE    -3    6    2 FOBS=     1.000     0.000 FCALC=   117.872   332.872
+ INDE     3    6    2 FOBS=     1.000     0.000 FCALC=    95.606   113.675
+ INDE    -6    2    3 FOBS=     1.000     0.000 FCALC=    97.278    18.816
+ INDE     1    2    3 FOBS=    40.000   270.000 FCALC=    75.458     1.004
+ INDE     6    2    3 FOBS=     1.000     0.000 FCALC=   141.176   323.716
+ INDE    -5    4    3 FOBS=     1.000     0.000 FCALC=    38.825   287.492
+ INDE     5    4    3 FOBS=     1.000     0.000 FCALC=    68.900    53.641
+ INDE    -4    5    3 FOBS=     1.000   180.000 FCALC=    95.231   339.660
+ INDE     4    5    3 FOBS=     1.000   180.000 FCALC=   107.455   239.684
+ INDE    -2    6    3 FOBS=     1.000     0.000 FCALC=   191.955   105.006
+ INDE     2    6    3 FOBS=     1.000     0.000 FCALC=    58.559   125.845
+ INDE    -5    3    4 FOBS=     1.000   180.000 FCALC=   106.907    42.627
+ INDE     2    3    4 FOBS=    30.000   120.000 FCALC=    72.138   352.725
+ INDE     5    3    4 FOBS=     1.000   180.000 FCALC=   164.064    55.343
+ INDE    -4    4    4 FOBS=     1.000     0.000 FCALC=   124.458   194.263
+ INDE     4    4    4 FOBS=     1.000     0.000 FCALC=   103.108    94.345
+ INDE    -3    5    4 FOBS=     1.000   180.000 FCALC=   246.984   350.400
+ INDE     3    5    4 FOBS=     1.000   180.000 FCALC=   129.756   142.637
+ INDE    -5    0    5 FOBS=     1.000     0.000 FCALC=    99.757   338.105
+ INDE     5    0    5 FOBS=     1.000     0.000 FCALC=    80.519   134.716
+ INDE    -5    1    5 FOBS=     1.000   180.000 FCALC=   128.306    12.744
+ INDE    -4    3    5 FOBS=     1.000   180.000 FCALC=    38.359   199.831
+ INDE     4    3    5 FOBS=     1.000   180.000 FCALC=   189.383    40.093
+ INDE    -3    4    5 FOBS=     1.000     0.000 FCALC=    38.338   319.178
+ INDE     3    4    5 FOBS=    20.000    50.000 FCALC=   108.673    45.145
+ INDE    -1    5    5 FOBS=     1.000   180.000 FCALC=    24.557   252.592
+ INDE     0    5    5 FOBS=     1.000   180.000 FCALC=    41.080    13.482
+ INDE    -3    2    6 FOBS=     1.000     0.000 FCALC=   114.794   126.616
+ INDE     3    2    6 FOBS=     1.000     0.000 FCALC=    70.173   355.841
+ INDE    -2    3    6 FOBS=     1.000   180.000 FCALC=    15.657   267.712
+ INDE     2    3    6 FOBS=     1.000   180.000 FCALC=    35.285   128.146
+ INDE    -1    0    7 FOBS=     1.000     0.000 FCALC=   373.869   122.913
+ INDE     0    0    7 FOBS=     1.000     0.000 FCALC=   167.580   231.307
+ INDE     1    0    7 FOBS=     1.000     0.000 FCALC=    56.679   104.964
+ INDE    -1    1    7 FOBS=     1.000   180.000 FCALC=   159.320   229.863
+ INDE     0    1    7 FOBS=     1.000   180.000 FCALC=    58.879    30.112
+ INDE    -7    1    0 FOBS=     1.000     0.000 FCALC=    61.874   324.346
+ INDE    -5    5    0 FOBS=     1.000     0.000 FCALC=   270.828   264.715
+ INDE    -1    7    0 FOBS=     1.000     0.000 FCALC=   192.684   236.040
+ INDE    -7   -1    1 FOBS=     1.000     0.000 FCALC=   154.596   271.650
+ INDE    -5   -5    1 FOBS=     1.000     0.000 FCALC=   145.646   359.906
+ INDE    -1   -7    1 FOBS=     1.000     0.000 FCALC=   103.964   106.101
+ INDE     0   -7    1 FOBS=     1.000     0.000 FCALC=    65.648   238.000
+ INDE    -6   -3    2 FOBS=     1.000     0.000 FCALC=   135.870    33.912
+ INDE     6   -3    2 FOBS=     1.000     0.000 FCALC=   206.807   241.582
+ INDE    -3   -6    2 FOBS=     1.000     0.000 FCALC=   110.365   286.562
+ INDE     3   -6    2 FOBS=     1.000     0.000 FCALC=    80.703   194.679
+ INDE    -6   -2    3 FOBS=     1.000     0.000 FCALC=   230.063   232.964
+ INDE     1   -2    3 FOBS=    40.000    90.000 FCALC=    80.575   351.311
+ INDE     6   -2    3 FOBS=     1.000     0.000 FCALC=    40.860   346.020
+ INDE    -5   -4    3 FOBS=     1.000     0.000 FCALC=   228.923   213.134
+ INDE     5   -4    3 FOBS=     1.000     0.000 FCALC=   234.796   110.849
+ INDE    -4   -5    3 FOBS=     1.000     0.000 FCALC=   118.217   256.094
+ INDE     4   -5    3 FOBS=     1.000     0.000 FCALC=    49.111   355.315
+ INDE    -2   -6    3 FOBS=     1.000     0.000 FCALC=    91.475   216.162
+ INDE     2   -6    3 FOBS=     1.000     0.000 FCALC=   123.129    84.046
+ INDE    -5   -3    4 FOBS=     1.000     0.000 FCALC=   221.866    29.855
+ INDE     2   -3    4 FOBS=    30.000    60.000 FCALC=    89.697    70.981
+ INDE     5   -3    4 FOBS=     1.000     0.000 FCALC=   139.774   232.558
+ INDE    -4   -4    4 FOBS=     1.000     0.000 FCALC=    95.175   118.879
+ INDE     4   -4    4 FOBS=     1.000     0.000 FCALC=   108.912    82.911
+ INDE    -3   -5    4 FOBS=     1.000     0.000 FCALC=   256.145   188.300
+ INDE     3   -5    4 FOBS=     1.000     0.000 FCALC=    90.949   121.795
+ INDE    -5   -1    5 FOBS=     1.000     0.000 FCALC=   124.625   267.181
+ INDE    -4   -3    5 FOBS=     1.000     0.000 FCALC=   133.283   352.966
+ INDE     4   -3    5 FOBS=     1.000     0.000 FCALC=   143.525   311.592
+ INDE    -3   -4    5 FOBS=     1.000     0.000 FCALC=   254.690   350.216
+ INDE     3   -4    5 FOBS=    20.000   310.000 FCALC=    28.630   274.887
+ INDE    -1   -5    5 FOBS=     1.000     0.000 FCALC=    63.634    62.868
+ INDE     0   -5    5 FOBS=     1.000     0.000 FCALC=    50.698    83.617
+ INDE    -3   -2    6 FOBS=     1.000     0.000 FCALC=    56.423   209.008
+ INDE     3   -2    6 FOBS=     1.000     0.000 FCALC=   209.532    47.677
+ INDE    -2   -3    6 FOBS=     1.000     0.000 FCALC=    58.085   241.569
+ INDE     2   -3    6 FOBS=     1.000     0.000 FCALC=    78.354   175.368
+ INDE    -1   -1    7 FOBS=     1.000     0.000 FCALC=   300.612    40.319
+ INDE     0   -1    7 FOBS=     1.000     0.000 FCALC=   268.654   153.958
+ INDE     4    2    2 FOBS=     1.000     0.000 FCALC=   153.940   117.141
+ INDE     4    2    1 FOBS=     1.000     0.000 FCALC=   131.230    52.915
+ INDE     4    2    0 FOBS=     1.000     0.000 FCALC=   173.724   317.868
+ INDE    -4   -2    1 FOBS=     1.000     0.000 FCALC=    90.663   160.130
+ INDE    -4   -2    2 FOBS=     1.000     0.000 FCALC=   142.696   330.801
+ INDE     4    1    2 FOBS=     1.000     0.000 FCALC=    82.042   336.860
+ INDE     4    1    1 FOBS=     1.000     0.000 FCALC=   222.939   277.522
+ INDE     4    1    0 FOBS=     1.000     0.000 FCALC=   372.627   234.481
+ INDE    -4   -1    1 FOBS=     1.000     0.000 FCALC=   150.952   172.346
+ INDE    -4   -1    2 FOBS=     1.000     0.000 FCALC=   105.525    38.972
+ INDE     4    0    2 FOBS=     1.000     0.000 FCALC=   120.043   181.025
+ INDE     4    0    1 FOBS=     1.000     0.000 FCALC=   245.693   184.163
+ INDE     4    0    0 FOBS=     1.000     0.000 FCALC=   381.074   163.232
+ INDE    -4    0    1 FOBS=     1.000     0.000 FCALC=   187.636   199.062
+ INDE    -4    0    2 FOBS=     1.000     0.000 FCALC=   146.311   145.196
+ INDE    -4    0    3 FOBS=     1.000     0.000 FCALC=   166.886   118.109
+ INDE     4   -1    2 FOBS=     1.000     0.000 FCALC=   176.338    80.389
+ INDE     4   -1    1 FOBS=     1.000     0.000 FCALC=   163.562    89.745
+ INDE    -4    1    0 FOBS=     1.000     0.000 FCALC=   266.965   265.291
+ INDE    -4    1    1 FOBS=     1.000     0.000 FCALC=   207.973   253.880
+ INDE    -4    1    2 FOBS=     1.000     0.000 FCALC=   147.952   231.216
+ INDE     4   -2    2 FOBS=     1.000     0.000 FCALC=   170.618   336.337
+ INDE     4   -2    1 FOBS=     1.000     0.000 FCALC=   121.834   295.568
+ INDE    -4    2    0 FOBS=     1.000     0.000 FCALC=    58.706   335.825
+ INDE    -4    2    1 FOBS=     1.000     0.000 FCALC=   109.574   310.753
+ INDE    -4    2    2 FOBS=     1.000     0.000 FCALC=    99.047   259.665
+ INDE     3    3    2 FOBS=     1.000     0.000 FCALC=    15.346   164.724
+ INDE     3    3    1 FOBS=     1.000     0.000 FCALC=    95.681   228.248
+ INDE     3    3    0 FOBS=     1.000     0.000 FCALC=   226.690   214.619
+ INDE    -3   -3    1 FOBS=     1.000     0.000 FCALC=   287.104   210.181
+ INDE    -3   -3    2 FOBS=     1.000     0.000 FCALC=   115.059   317.028
+ INDE     3    2    3 FOBS=     1.000     0.000 FCALC=    84.130    97.642
+ INDE     3    2    2 FOBS=     1.000     0.000 FCALC=    23.328    47.164
+ INDE     3    2    1 FOBS=     1.000     0.000 FCALC=    66.367   296.791
+ INDE     3    2    0 FOBS=     1.000     0.000 FCALC=   139.045   209.731
+ INDE    -3   -2    1 FOBS=     1.000     0.000 FCALC=   123.384   304.493
+ INDE    -3   -2    2 FOBS=     1.000     0.000 FCALC=   128.362    40.510
+ INDE    -3   -2    3 FOBS=     1.000     0.000 FCALC=    60.886   288.038
+ INDE     3    1    3 FOBS=     1.000     0.000 FCALC=    95.346   353.827
+ INDE     3    1    2 FOBS=     1.000     0.000 FCALC=    78.192   255.799
+ INDE     3    1    1 FOBS=     1.000     0.000 FCALC=   271.359   229.537
+ INDE     3    1    0 FOBS=     1.000     0.000 FCALC=   327.064   197.175
+ INDE    -3   -1    1 FOBS=     1.000     0.000 FCALC=   254.378   145.838
+ INDE    -3   -1    2 FOBS=     1.000     0.000 FCALC=   156.069   166.247
+ INDE    -3   -1    3 FOBS=     1.000     0.000 FCALC=   118.624    47.914
+ INDE     3    0    3 FOBS=     1.000     0.000 FCALC=   173.744   195.638
+ INDE     3    0    2 FOBS=     1.000     0.000 FCALC=   212.640   141.727
+ INDE     3    0    1 FOBS=     1.000     0.000 FCALC=   401.955   137.050
+ INDE     3    0    0 FOBS=     1.000     0.000 FCALC=   420.997   124.794
+ INDE    -3    0    1 FOBS=     1.000     0.000 FCALC=   428.352   228.613
+ INDE    -3    0    2 FOBS=     1.000     0.000 FCALC=   180.243   269.759
+ INDE    -3    0    3 FOBS=     1.000     0.000 FCALC=   193.116   112.224
+ INDE    -3    0    4 FOBS=     1.000     0.000 FCALC=    92.304   134.504
+ INDE     3   -1    3 FOBS=     1.000     0.000 FCALC=   293.350    78.752
+ INDE     3   -1    2 FOBS=     1.000     0.000 FCALC=   277.498    28.256
+ INDE     3   -1    1 FOBS=     1.000     0.000 FCALC=   324.277    31.398
+ INDE    -3    1    0 FOBS=     1.000     0.000 FCALC=   210.835   322.235
+ INDE    -3    1    1 FOBS=     1.000     0.000 FCALC=   300.025   286.904
+ INDE    -3    1    2 FOBS=     1.000     0.000 FCALC=    81.697   299.547
+ INDE    -3    1    3 FOBS=     1.000     0.000 FCALC=   232.303   198.704
+ INDE     3   -2    3 FOBS=     1.000     0.000 FCALC=   212.929   325.021
+ INDE     3   -2    2 FOBS=     1.000     0.000 FCALC=   231.556   267.007
+ INDE     3   -2    1 FOBS=     1.000     0.000 FCALC=   211.720   263.549
+ INDE    -3    2    0 FOBS=     1.000     0.000 FCALC=    90.991   175.084
+ INDE    -3    2    1 FOBS=     1.000     0.000 FCALC=   208.948   299.475
+ INDE    -3    2    2 FOBS=     1.000     0.000 FCALC=   216.759   303.770
+ INDE    -3    2    3 FOBS=     1.000     0.000 FCALC=   214.203   308.742
+ INDE     3   -3    2 FOBS=     1.000     0.000 FCALC=   114.778   146.226
+ INDE     3   -3    1 FOBS=     1.000     0.000 FCALC=   212.260   166.623
+ INDE    -3    3    0 FOBS=     1.000     0.000 FCALC=   233.788   257.133
+ INDE    -3    3    1 FOBS=     1.000     0.000 FCALC=   257.737   328.619
+ INDE    -3    3    2 FOBS=     1.000     0.000 FCALC=   299.479     6.286
+ INDE     2    4    2 FOBS=     1.000     0.000 FCALC=   162.387   314.633
+ INDE     2    4    1 FOBS=     1.000     0.000 FCALC=   245.699   246.114
+ INDE     2    4    0 FOBS=     1.000     0.000 FCALC=   276.626   216.405
+ INDE    -2   -4    1 FOBS=     1.000     0.000 FCALC=   164.292   183.841
+ INDE    -2   -4    2 FOBS=     1.000     0.000 FCALC=   140.607    95.111
+ INDE     2    3    3 FOBS=     1.000     0.000 FCALC=    79.014   287.029
+ INDE     2    3    2 FOBS=     1.000     0.000 FCALC=   159.502   183.117
+ INDE     2    3    1 FOBS=     1.000     0.000 FCALC=   121.028   152.683
+ INDE     2    3    0 FOBS=     1.000     0.000 FCALC=   223.963   159.737
+ INDE    -2   -3    1 FOBS=     1.000     0.000 FCALC=   197.377   256.888
+ INDE    -2   -3    2 FOBS=     1.000     0.000 FCALC=   124.853   216.447
+ INDE    -2   -3    3 FOBS=     1.000     0.000 FCALC=   239.498   252.337
+ INDE     2    2    4 FOBS=     1.000     0.000 FCALC=    36.234    45.244
+ INDE     2    2    3 FOBS=     1.000     0.000 FCALC=    48.060    90.241
+ INDE     2    2    2 FOBS=     1.000     0.000 FCALC=   159.158    32.937
+ INDE     2    2    1 FOBS=     1.000     0.000 FCALC=   216.259   284.660
+ INDE     2    2    0 FOBS=     1.000     0.000 FCALC=   163.106   215.957
+ INDE    -2   -2    1 FOBS=     1.000     0.000 FCALC=    87.351   127.565
+ INDE    -2   -2    2 FOBS=     1.000     0.000 FCALC=   109.391   292.417
+ INDE    -2   -2    3 FOBS=     1.000     0.000 FCALC=   235.361   357.248
+ INDE    -2   -2    4 FOBS=     1.000     0.000 FCALC=   159.825   342.453
+ INDE     2    1    4 FOBS=     1.000     0.000 FCALC=   144.360   296.143
+ INDE     2    1    3 FOBS=     1.000     0.000 FCALC=    92.072   245.653
+ INDE     2    1    2 FOBS=     1.000     0.000 FCALC=   207.373   225.578
+ INDE     2    1    1 FOBS=     1.000     0.000 FCALC=   460.162   180.972
+ INDE     2    1    0 FOBS=     1.000     0.000 FCALC=   481.442   165.253
+ INDE    -2   -1    1 FOBS=     1.000     0.000 FCALC=   483.103   215.268
+ INDE    -2   -1    2 FOBS=     1.000     0.000 FCALC=   130.775   335.953
+ INDE    -2   -1    3 FOBS=     1.000     0.000 FCALC=   319.698    97.859
+ INDE    -2   -1    4 FOBS=     1.000     0.000 FCALC=   135.457    86.466
+ INDE     2    0    4 FOBS=     1.000     0.000 FCALC=   195.255   169.383
+ INDE     2    0    3 FOBS=     1.000     0.000 FCALC=   187.740   107.685
+ INDE     2    0    2 FOBS=     1.000     0.000 FCALC=   332.155    98.907
+ INDE     2    0    1 FOBS=     1.000     0.000 FCALC=   440.940    78.175
+ INDE     2    0    0 FOBS=     1.000     0.000 FCALC=   502.864   108.628
+ INDE    -2    0    1 FOBS=     1.000     0.000 FCALC=   706.211   279.676
+ INDE    -2    0    2 FOBS=     1.000     0.000 FCALC=   106.663     8.908
+ INDE    -2    0    3 FOBS=     1.000     0.000 FCALC=   369.547   187.843
+ INDE    -2    0    4 FOBS=     1.000     0.000 FCALC=   142.618   228.892
+ INDE     2   -1    4 FOBS=     1.000     0.000 FCALC=   161.738    51.685
+ INDE     2   -1    3 FOBS=     1.000     0.000 FCALC=   171.034   345.734
+ INDE     2   -1    2 FOBS=     1.000     0.000 FCALC=   303.947   358.492
+ INDE     2   -1    1 FOBS=     1.000     0.000 FCALC=   297.995   323.560
+ INDE    -2    1    0 FOBS=     1.000     0.000 FCALC=   399.319   291.634
+ INDE    -2    1    1 FOBS=     1.000     0.000 FCALC=   708.153   339.124
+ INDE    -2    1    2 FOBS=     1.000     0.000 FCALC=   163.876    22.216
+ INDE    -2    1    3 FOBS=     1.000     0.000 FCALC=   239.574   271.784
+ INDE    -2    1    4 FOBS=     1.000     0.000 FCALC=   134.338   333.807
+ INDE     2   -2    4 FOBS=     1.000     0.000 FCALC=    30.621   265.414
+ INDE     2   -2    3 FOBS=     1.000     0.000 FCALC=    83.774   190.275
+ INDE     2   -2    2 FOBS=     1.000     0.000 FCALC=   213.470   274.582
+ INDE     2   -2    1 FOBS=     1.000     0.000 FCALC=   307.448   209.423
+ INDE    -2    2    0 FOBS=     1.000     0.000 FCALC=   262.564   321.233
+ INDE    -2    2    1 FOBS=     1.000     0.000 FCALC=   455.385    35.472
+ INDE    -2    2    2 FOBS=     1.000     0.000 FCALC=   161.626    71.895
+ INDE    -2    2    3 FOBS=     1.000     0.000 FCALC=    62.316   326.509
+ INDE    -2    2    4 FOBS=     1.000     0.000 FCALC=    53.759   349.152
+ INDE     2   -3    3 FOBS=     1.000     0.000 FCALC=   112.170    32.414
+ INDE     2   -3    2 FOBS=     1.000     0.000 FCALC=   209.121   195.207
+ INDE     2   -3    1 FOBS=     1.000     0.000 FCALC=   409.257   119.601
+ INDE    -2    3    0 FOBS=     1.000     0.000 FCALC=   294.896   330.431
+ INDE    -2    3    1 FOBS=     1.000     0.000 FCALC=   240.657    49.452
+ INDE    -2    3    2 FOBS=     1.000     0.000 FCALC=   153.450    84.198
+ INDE    -2    3    3 FOBS=     1.000     0.000 FCALC=    16.929   295.446
+ INDE     2   -4    2 FOBS=     1.000     0.000 FCALC=   178.868   111.093
+ INDE     2   -4    1 FOBS=     1.000     0.000 FCALC=   374.903    32.483
+ INDE    -2    4    0 FOBS=     1.000     0.000 FCALC=   328.872    36.420
+ INDE    -2    4    1 FOBS=     1.000     0.000 FCALC=   265.007    92.185
+ INDE    -2    4    2 FOBS=     1.000     0.000 FCALC=   186.951   147.302
+ INDE     1    4    2 FOBS=     1.000     0.000 FCALC=   145.440   180.452
+ INDE     1    4    1 FOBS=     1.000     0.000 FCALC=   100.102   218.155
+ INDE     1    4    0 FOBS=     1.000     0.000 FCALC=   308.985   191.787
+ INDE    -1   -4    1 FOBS=     1.000     0.000 FCALC=   249.196   210.376
+ INDE    -1   -4    2 FOBS=     1.000     0.000 FCALC=   175.033   206.531
+ INDE     1    3    3 FOBS=     1.000     0.000 FCALC=   155.561   129.255
+ INDE     1    3    2 FOBS=     1.000     0.000 FCALC=   191.069    44.303
+ INDE     1    3    1 FOBS=     1.000     0.000 FCALC=   142.753   225.740
+ INDE     1    3    0 FOBS=     1.000     0.000 FCALC=   321.397   122.511
+ INDE    -1   -3    1 FOBS=     1.000     0.000 FCALC=   281.967   299.040
+ INDE    -1   -3    2 FOBS=     1.000     0.000 FCALC=   236.899   314.683
+ INDE    -1   -3    3 FOBS=     1.000     0.000 FCALC=   152.923   310.702
+ INDE     1    2    4 FOBS=     1.000     0.000 FCALC=    74.176   290.286
+ INDE     1    2    2 FOBS=     1.000     0.000 FCALC=   179.718   273.670
+ INDE     1    2    1 FOBS=     1.000     0.000 FCALC=   220.850   186.881
+ INDE     1    2    0 FOBS=     1.000     0.000 FCALC=    85.491   208.024
+ INDE    -1   -2    1 FOBS=     1.000     0.000 FCALC=    97.425   144.858
+ INDE    -1   -2    2 FOBS=     1.000     0.000 FCALC=   213.296    50.030
+ INDE    -1   -2    3 FOBS=     1.000     0.000 FCALC=   161.629    72.191
+ INDE    -1   -2    4 FOBS=     1.000     0.000 FCALC=   301.777    22.898
+ INDE     1    1    4 FOBS=     1.000     0.000 FCALC=    91.804   183.846
+ INDE     1    1    3 FOBS=     1.000     0.000 FCALC=    84.118   138.957
+ INDE     1    1    2 FOBS=     1.000     0.000 FCALC=   173.292   123.250
+ INDE     1    1    1 FOBS=     1.000     0.000 FCALC=   216.510   169.447
+ INDE     1    1    0 FOBS=     1.000     0.000 FCALC=   819.303   153.832
+ INDE    -1   -1    1 FOBS=     1.000     0.000 FCALC=   750.034   256.630
+ INDE    -1   -1    2 FOBS=     1.000     0.000 FCALC=    49.824   193.802
+ INDE    -1   -1    3 FOBS=     1.000     0.000 FCALC=   213.492   192.579
+ INDE    -1   -1    4 FOBS=     1.000     0.000 FCALC=   176.159   101.327
+ INDE     1    0    4 FOBS=     1.000     0.000 FCALC=    73.714   339.817
+ INDE     1    0    3 FOBS=     1.000     0.000 FCALC=    75.119    43.788
+ INDE     1    0    2 FOBS=     1.000     0.000 FCALC=   220.353    17.806
+ INDE     1    0    1 FOBS=     1.000     0.000 FCALC=   402.940   129.394
+ INDE     1    0    0 FOBS=     1.000     0.000 FCALC=  1453.043    77.791
+ INDE    -1    0    1 FOBS=     1.000     0.000 FCALC=  1347.950   338.870
+ INDE    -1    0    2 FOBS=     1.000     0.000 FCALC=   293.579    36.027
+ INDE    -1    0    3 FOBS=     1.000     0.000 FCALC=   134.414   272.429
+ INDE    -1    0    4 FOBS=     1.000     0.000 FCALC=    76.105   142.236
+ INDE     1   -1    4 FOBS=     1.000     0.000 FCALC=   158.437   207.529
+ INDE     1   -1    3 FOBS=     1.000     0.000 FCALC=    64.281    64.258
+ INDE     1   -1    2 FOBS=     1.000     0.000 FCALC=   264.604   304.617
+ INDE     1   -1    1 FOBS=     1.000     0.000 FCALC=   355.370    52.991
+ INDE    -1    1    0 FOBS=     1.000     0.000 FCALC=  1386.874     2.909
+ INDE    -1    1    1 FOBS=     1.000     0.000 FCALC=  1320.499    63.280
+ INDE    -1    1    2 FOBS=     1.000     0.000 FCALC=   472.181   137.541
+ INDE    -1    1    3 FOBS=     1.000     0.000 FCALC=   179.766   252.418
+ INDE    -1    1    4 FOBS=     1.000     0.000 FCALC=    78.614   268.466
+ INDE     1   -2    4 FOBS=     1.000     0.000 FCALC=   150.035   107.010
+ INDE     1   -2    2 FOBS=     1.000     0.000 FCALC=   315.282   214.820
+ INDE     1   -2    1 FOBS=     1.000     0.000 FCALC=    27.187    45.356
+ INDE    -1    2    0 FOBS=     1.000     0.000 FCALC=   655.536    86.335
+ INDE    -1    2    1 FOBS=     1.000     0.000 FCALC=   646.870   152.982
+ INDE    -1    2    2 FOBS=     1.000     0.000 FCALC=   340.574   244.446
+ INDE    -1    2    3 FOBS=     1.000     0.000 FCALC=   307.723   327.371
+ INDE    -1    2    4 FOBS=     1.000     0.000 FCALC=   188.629    30.707
+ INDE     1   -3    3 FOBS=     1.000     0.000 FCALC=    46.153   354.760
+ INDE     1   -3    2 FOBS=     1.000     0.000 FCALC=   266.796   110.073
+ INDE     1   -3    1 FOBS=     1.000     0.000 FCALC=   244.009    52.848
+ INDE    -1    3    0 FOBS=     1.000     0.000 FCALC=    49.865   292.257
+ INDE    -1    3    1 FOBS=     1.000     0.000 FCALC=   123.761   342.096
+ INDE    -1    3    2 FOBS=     1.000     0.000 FCALC=   147.635    33.925
+ INDE    -1    3    3 FOBS=     1.000     0.000 FCALC=   182.518    47.249
+ INDE     1   -4    2 FOBS=     1.000     0.000 FCALC=    68.742   358.737
+ INDE     1   -4    1 FOBS=     1.000     0.000 FCALC=   141.802   347.908
+ INDE    -1    4    0 FOBS=     1.000     0.000 FCALC=   235.881    36.608
+ INDE    -1    4    1 FOBS=     1.000     0.000 FCALC=   297.475   101.491
+ INDE    -1    4    2 FOBS=     1.000     0.000 FCALC=   139.956   175.194
+ INDE     0    5    0 FOBS=     1.000     0.000 FCALC=   287.332   182.532
+ INDE     0    4    2 FOBS=     1.000     0.000 FCALC=    66.479   330.846
+ INDE     0    4    1 FOBS=     1.000     0.000 FCALC=   334.177   185.237
+ INDE     0    4    0 FOBS=     1.000     0.000 FCALC=   454.533   111.014
+ INDE     0   -4    1 FOBS=     1.000     0.000 FCALC=   274.333   313.573
+ INDE     0   -4    2 FOBS=     1.000     0.000 FCALC=    28.070    33.449
+ INDE     0    3    3 FOBS=     1.000     0.000 FCALC=    97.496    57.286
+ INDE     0    3    2 FOBS=     1.000     0.000 FCALC=    58.534   187.434
+ INDE     0    3    1 FOBS=     1.000     0.000 FCALC=   297.677    98.145
+ INDE     0    3    0 FOBS=     1.000     0.000 FCALC=   339.613    16.911
+ INDE     0   -3    1 FOBS=     1.000     0.000 FCALC=   246.139    32.086
+ INDE     0   -3    2 FOBS=     1.000     0.000 FCALC=   169.171    40.716
+ INDE     0   -3    3 FOBS=     1.000     0.000 FCALC=   148.350   321.961
+ INDE     0    2    4 FOBS=     1.000     0.000 FCALC=   106.031   144.383
+ INDE     0    2    3 FOBS=     1.000     0.000 FCALC=   166.360    53.734
+ INDE     0    2    2 FOBS=     1.000     0.000 FCALC=   178.621   357.988
+ INDE     0    2    1 FOBS=     1.000     0.000 FCALC=   323.606   260.852
+ INDE     0    2    0 FOBS=     1.000     0.000 FCALC=   589.322   187.348
+ INDE     0   -2    1 FOBS=     1.000     0.000 FCALC=   285.340   219.677
+ INDE     0   -2    2 FOBS=     1.000     0.000 FCALC=   210.304   147.311
+ INDE     0   -2    3 FOBS=     1.000     0.000 FCALC=    13.667   158.560
+ INDE     0   -2    4 FOBS=     1.000     0.000 FCALC=   261.976    77.032
+ INDE     0    1    4 FOBS=     1.000     0.000 FCALC=    87.333   358.617
+ INDE     0    1    3 FOBS=     1.000     0.000 FCALC=   199.074   334.317
+ INDE     0    1    2 FOBS=     1.000     0.000 FCALC=   328.228   246.004
+ INDE     0    1    1 FOBS=     1.000     0.000 FCALC=  1062.284   151.820
+ INDE     0    1    0 FOBS=     1.000     0.000 FCALC=  1668.512    87.887
+ INDE     0   -1    1 FOBS=     1.000     0.000 FCALC=   983.511   328.985
+ INDE     0   -1    2 FOBS=     1.000     0.000 FCALC=   101.769   300.632
+ INDE     0   -1    3 FOBS=     1.000     0.000 FCALC=    99.256   333.661
+ INDE     0   -1    4 FOBS=     1.000     0.000 FCALC=   232.769   134.847
+ INDE     0    0    4 FOBS=     1.000     0.000 FCALC=   193.534   215.802
+ INDE     0    0    3 FOBS=     1.000     0.000 FCALC=    26.588   226.463
+ INDE     0    0    2 FOBS=     1.000     0.000 FCALC=   238.537   131.975
+ INDE     0    0    1 FOBS=     1.000     0.000 FCALC=  1402.065    60.345
+ INDE     0    0    0 FOBS=     1.000     0.000 FCALC=  2216.327     0.000
+ XRAY>   bins=1 
+ XRAY>   do (fcalc=scale(fobs,fcalc)*fobs) ( $hr <= d ) 
+ XDOSCALE:  scale factors are stored in symbols $K_BIN1.             
+ XDOSCALE: the overall scale is stored in $XSCFFK
+ Total of       246 structure factor elements were selected.
+ XRAY>end 
+ CNSsolve> 
+ CNSsolve> 
+ CNSsolve>stop 
+          ============================================================
+           Maximum dynamic memory allocation:    10360168 bytes
+           Maximum dynamic memory overhead:          1120 bytes
+           Program started at: 11:03:08 on 07-Nov-2011
+           Program stopped at: 11:03:08 on 07-Nov-2011
+           CPU time used:       0.5714 seconds
+          ============================================================

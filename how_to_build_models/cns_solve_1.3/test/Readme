@@ -1,0 +1,26 @@
+==============================================================================
+                               Running tests
+==============================================================================
+
+cd to the appropriate machine directory (for example):
+
+	cd $CNS_SOLVE/sgi-r8k10k-irix-6.5/test
+
+to setup the appropriate links in the directory:
+
+	run_tests -link
+
+to run all the tests:
+
+	run_tests *.inp
+
+to calculate differences to the reference output files: 
+
+	run_diffs *.inp
+
+files will be created with any differences.
+
+Note: the confdbtest.inp test file require library files
+(libraries/confdb) which are not distributed with the CNS installation
+(due to their size). These files can be obtained via the HTML
+interface if necessary.

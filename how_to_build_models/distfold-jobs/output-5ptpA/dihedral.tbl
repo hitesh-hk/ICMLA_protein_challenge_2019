@@ -1,0 +1,166 @@
+assign (resid  38 and name c) (resid  39 and name  n) (resid  39 and name ca) (resid  39 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid  39 and name n) (resid  39 and name ca) (resid  39 and name  c) (resid  40 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid  39 and name c) (resid  40 and name  n) (resid  40 and name ca) (resid  40 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid  40 and name n) (resid  40 and name ca) (resid  40 and name  c) (resid  41 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid  40 and name c) (resid  41 and name  n) (resid  41 and name ca) (resid  41 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid  41 and name n) (resid  41 and name ca) (resid  41 and name  c) (resid  42 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 144 and name c) (resid 145 and name  n) (resid 145 and name ca) (resid 145 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 145 and name n) (resid 145 and name ca) (resid 145 and name  c) (resid 146 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 145 and name c) (resid 146 and name  n) (resid 146 and name ca) (resid 146 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 146 and name n) (resid 146 and name ca) (resid 146 and name  c) (resid 147 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 146 and name c) (resid 147 and name  n) (resid 147 and name ca) (resid 147 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 147 and name n) (resid 147 and name ca) (resid 147 and name  c) (resid 148 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 147 and name c) (resid 148 and name  n) (resid 148 and name ca) (resid 148 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 148 and name n) (resid 148 and name ca) (resid 148 and name  c) (resid 149 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 148 and name c) (resid 149 and name  n) (resid 149 and name ca) (resid 149 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 149 and name n) (resid 149 and name ca) (resid 149 and name  c) (resid 150 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 149 and name c) (resid 150 and name  n) (resid 150 and name ca) (resid 150 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 150 and name n) (resid 150 and name ca) (resid 150 and name  c) (resid 151 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 150 and name c) (resid 151 and name  n) (resid 151 and name ca) (resid 151 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 151 and name n) (resid 151 and name ca) (resid 151 and name  c) (resid 152 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 207 and name c) (resid 208 and name  n) (resid 208 and name ca) (resid 208 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 208 and name n) (resid 208 and name ca) (resid 208 and name  c) (resid 209 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 208 and name c) (resid 209 and name  n) (resid 209 and name ca) (resid 209 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 209 and name n) (resid 209 and name ca) (resid 209 and name  c) (resid 210 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 209 and name c) (resid 210 and name  n) (resid 210 and name ca) (resid 210 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 210 and name n) (resid 210 and name ca) (resid 210 and name  c) (resid 211 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 210 and name c) (resid 211 and name  n) (resid 211 and name ca) (resid 211 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 211 and name n) (resid 211 and name ca) (resid 211 and name  c) (resid 212 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 211 and name c) (resid 212 and name  n) (resid 212 and name ca) (resid 212 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 212 and name n) (resid 212 and name ca) (resid 212 and name  c) (resid 213 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 212 and name c) (resid 213 and name  n) (resid 213 and name ca) (resid 213 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 213 and name n) (resid 213 and name ca) (resid 213 and name  c) (resid 214 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 213 and name c) (resid 214 and name  n) (resid 214 and name ca) (resid 214 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 214 and name n) (resid 214 and name ca) (resid 214 and name  c) (resid 215 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 214 and name c) (resid 215 and name  n) (resid 215 and name ca) (resid 215 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 215 and name n) (resid 215 and name ca) (resid 215 and name  c) (resid 216 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 215 and name c) (resid 216 and name  n) (resid 216 and name ca) (resid 216 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 216 and name n) (resid 216 and name ca) (resid 216 and name  c) (resid 217 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 216 and name c) (resid 217 and name  n) (resid 217 and name ca) (resid 217 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 217 and name n) (resid 217 and name ca) (resid 217 and name  c) (resid 218 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 217 and name c) (resid 218 and name  n) (resid 218 and name ca) (resid 218 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 218 and name n) (resid 218 and name ca) (resid 218 and name  c) (resid 219 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 218 and name c) (resid 219 and name  n) (resid 219 and name ca) (resid 219 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 219 and name n) (resid 219 and name ca) (resid 219 and name  c) (resid 220 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid 219 and name c) (resid 220 and name  n) (resid 220 and name ca) (resid 220 and name c) 5.0  -63.47    3.68 2 !helix phi
+assign (resid 220 and name n) (resid 220 and name ca) (resid 220 and name  c) (resid 221 and name n) 5.0  -41.51    3.94 2 !helix psi
+assign (resid   5 and name n) (resid   5 and name ca) (resid   5 and name  c) (resid   6 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid   5 and name c) (resid   6 and name  n) (resid   6 and name ca) (resid   6 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  15 and name n) (resid  15 and name ca) (resid  15 and name  c) (resid  16 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  15 and name c) (resid  16 and name  n) (resid  16 and name ca) (resid  16 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  16 and name n) (resid  16 and name ca) (resid  16 and name  c) (resid  17 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  16 and name c) (resid  17 and name  n) (resid  17 and name ca) (resid  17 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  17 and name n) (resid  17 and name ca) (resid  17 and name  c) (resid  18 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  17 and name c) (resid  18 and name  n) (resid  18 and name ca) (resid  18 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  18 and name n) (resid  18 and name ca) (resid  18 and name  c) (resid  19 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  18 and name c) (resid  19 and name  n) (resid  19 and name ca) (resid  19 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  23 and name n) (resid  23 and name ca) (resid  23 and name  c) (resid  24 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  23 and name c) (resid  24 and name  n) (resid  24 and name ca) (resid  24 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  24 and name n) (resid  24 and name ca) (resid  24 and name  c) (resid  25 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  24 and name c) (resid  25 and name  n) (resid  25 and name ca) (resid  25 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  25 and name n) (resid  25 and name ca) (resid  25 and name  c) (resid  26 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  25 and name c) (resid  26 and name  n) (resid  26 and name ca) (resid  26 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  26 and name n) (resid  26 and name ca) (resid  26 and name  c) (resid  27 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  26 and name c) (resid  27 and name  n) (resid  27 and name ca) (resid  27 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  27 and name n) (resid  27 and name ca) (resid  27 and name  c) (resid  28 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  27 and name c) (resid  28 and name  n) (resid  28 and name ca) (resid  28 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  28 and name n) (resid  28 and name ca) (resid  28 and name  c) (resid  29 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  28 and name c) (resid  29 and name  n) (resid  29 and name ca) (resid  29 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  29 and name n) (resid  29 and name ca) (resid  29 and name  c) (resid  30 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  29 and name c) (resid  30 and name  n) (resid  30 and name ca) (resid  30 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  30 and name n) (resid  30 and name ca) (resid  30 and name  c) (resid  31 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  30 and name c) (resid  31 and name  n) (resid  31 and name ca) (resid  31 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  34 and name n) (resid  34 and name ca) (resid  34 and name  c) (resid  35 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  34 and name c) (resid  35 and name  n) (resid  35 and name ca) (resid  35 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  35 and name n) (resid  35 and name ca) (resid  35 and name  c) (resid  36 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  35 and name c) (resid  36 and name  n) (resid  36 and name ca) (resid  36 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  36 and name n) (resid  36 and name ca) (resid  36 and name  c) (resid  37 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  36 and name c) (resid  37 and name  n) (resid  37 and name ca) (resid  37 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  47 and name n) (resid  47 and name ca) (resid  47 and name  c) (resid  48 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  47 and name c) (resid  48 and name  n) (resid  48 and name ca) (resid  48 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  48 and name n) (resid  48 and name ca) (resid  48 and name  c) (resid  49 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  48 and name c) (resid  49 and name  n) (resid  49 and name ca) (resid  49 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  49 and name n) (resid  49 and name ca) (resid  49 and name  c) (resid  50 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  49 and name c) (resid  50 and name  n) (resid  50 and name ca) (resid  50 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  63 and name n) (resid  63 and name ca) (resid  63 and name  c) (resid  64 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  63 and name c) (resid  64 and name  n) (resid  64 and name ca) (resid  64 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  64 and name n) (resid  64 and name ca) (resid  64 and name  c) (resid  65 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  64 and name c) (resid  65 and name  n) (resid  65 and name ca) (resid  65 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  65 and name n) (resid  65 and name ca) (resid  65 and name  c) (resid  66 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  65 and name c) (resid  66 and name  n) (resid  66 and name ca) (resid  66 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  66 and name n) (resid  66 and name ca) (resid  66 and name  c) (resid  67 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  66 and name c) (resid  67 and name  n) (resid  67 and name ca) (resid  67 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  67 and name n) (resid  67 and name ca) (resid  67 and name  c) (resid  68 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  67 and name c) (resid  68 and name  n) (resid  68 and name ca) (resid  68 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  68 and name n) (resid  68 and name ca) (resid  68 and name  c) (resid  69 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  68 and name c) (resid  69 and name  n) (resid  69 and name ca) (resid  69 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  69 and name n) (resid  69 and name ca) (resid  69 and name  c) (resid  70 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  69 and name c) (resid  70 and name  n) (resid  70 and name ca) (resid  70 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  70 and name n) (resid  70 and name ca) (resid  70 and name  c) (resid  71 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  70 and name c) (resid  71 and name  n) (resid  71 and name ca) (resid  71 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  71 and name n) (resid  71 and name ca) (resid  71 and name  c) (resid  72 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  71 and name c) (resid  72 and name  n) (resid  72 and name ca) (resid  72 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  86 and name n) (resid  86 and name ca) (resid  86 and name  c) (resid  87 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  86 and name c) (resid  87 and name  n) (resid  87 and name ca) (resid  87 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  87 and name n) (resid  87 and name ca) (resid  87 and name  c) (resid  88 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  87 and name c) (resid  88 and name  n) (resid  88 and name ca) (resid  88 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  88 and name n) (resid  88 and name ca) (resid  88 and name  c) (resid  89 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  88 and name c) (resid  89 and name  n) (resid  89 and name ca) (resid  89 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid  89 and name n) (resid  89 and name ca) (resid  89 and name  c) (resid  90 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid  89 and name c) (resid  90 and name  n) (resid  90 and name ca) (resid  90 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 115 and name n) (resid 115 and name ca) (resid 115 and name  c) (resid 116 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 115 and name c) (resid 116 and name  n) (resid 116 and name ca) (resid 116 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 116 and name n) (resid 116 and name ca) (resid 116 and name  c) (resid 117 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 116 and name c) (resid 117 and name  n) (resid 117 and name ca) (resid 117 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 117 and name n) (resid 117 and name ca) (resid 117 and name  c) (resid 118 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 117 and name c) (resid 118 and name  n) (resid 118 and name ca) (resid 118 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 118 and name n) (resid 118 and name ca) (resid 118 and name  c) (resid 119 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 118 and name c) (resid 119 and name  n) (resid 119 and name ca) (resid 119 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 119 and name n) (resid 119 and name ca) (resid 119 and name  c) (resid 120 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 119 and name c) (resid 120 and name  n) (resid 120 and name ca) (resid 120 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 136 and name n) (resid 136 and name ca) (resid 136 and name  c) (resid 137 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 136 and name c) (resid 137 and name  n) (resid 137 and name ca) (resid 137 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 137 and name n) (resid 137 and name ca) (resid 137 and name  c) (resid 138 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 137 and name c) (resid 138 and name  n) (resid 138 and name ca) (resid 138 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 138 and name n) (resid 138 and name ca) (resid 138 and name  c) (resid 139 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 138 and name c) (resid 139 and name  n) (resid 139 and name ca) (resid 139 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 139 and name n) (resid 139 and name ca) (resid 139 and name  c) (resid 140 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 139 and name c) (resid 140 and name  n) (resid 140 and name ca) (resid 140 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 140 and name n) (resid 140 and name ca) (resid 140 and name  c) (resid 141 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 140 and name c) (resid 141 and name  n) (resid 141 and name ca) (resid 141 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 141 and name n) (resid 141 and name ca) (resid 141 and name  c) (resid 142 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 141 and name c) (resid 142 and name  n) (resid 142 and name ca) (resid 142 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 160 and name n) (resid 160 and name ca) (resid 160 and name  c) (resid 161 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 160 and name c) (resid 161 and name  n) (resid 161 and name ca) (resid 161 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 161 and name n) (resid 161 and name ca) (resid 161 and name  c) (resid 162 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 161 and name c) (resid 162 and name  n) (resid 162 and name ca) (resid 162 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 162 and name n) (resid 162 and name ca) (resid 162 and name  c) (resid 163 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 162 and name c) (resid 163 and name  n) (resid 163 and name ca) (resid 163 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 179 and name n) (resid 179 and name ca) (resid 179 and name  c) (resid 180 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 179 and name c) (resid 180 and name  n) (resid 180 and name ca) (resid 180 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 180 and name n) (resid 180 and name ca) (resid 180 and name  c) (resid 181 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 180 and name c) (resid 181 and name  n) (resid 181 and name ca) (resid 181 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 181 and name n) (resid 181 and name ca) (resid 181 and name  c) (resid 182 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 181 and name c) (resid 182 and name  n) (resid 182 and name ca) (resid 182 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 185 and name n) (resid 185 and name ca) (resid 185 and name  c) (resid 186 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 185 and name c) (resid 186 and name  n) (resid 186 and name ca) (resid 186 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 186 and name n) (resid 186 and name ca) (resid 186 and name  c) (resid 187 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 186 and name c) (resid 187 and name  n) (resid 187 and name ca) (resid 187 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 187 and name n) (resid 187 and name ca) (resid 187 and name  c) (resid 188 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 187 and name c) (resid 188 and name  n) (resid 188 and name ca) (resid 188 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 188 and name n) (resid 188 and name ca) (resid 188 and name  c) (resid 189 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 188 and name c) (resid 189 and name  n) (resid 189 and name ca) (resid 189 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 189 and name n) (resid 189 and name ca) (resid 189 and name  c) (resid 190 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 189 and name c) (resid 190 and name  n) (resid 190 and name ca) (resid 190 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 190 and name n) (resid 190 and name ca) (resid 190 and name  c) (resid 191 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 190 and name c) (resid 191 and name  n) (resid 191 and name ca) (resid 191 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 191 and name n) (resid 191 and name ca) (resid 191 and name  c) (resid 192 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 191 and name c) (resid 192 and name  n) (resid 192 and name ca) (resid 192 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 203 and name n) (resid 203 and name ca) (resid 203 and name  c) (resid 204 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 203 and name c) (resid 204 and name  n) (resid 204 and name ca) (resid 204 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 204 and name n) (resid 204 and name ca) (resid 204 and name  c) (resid 205 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 204 and name c) (resid 205 and name  n) (resid 205 and name ca) (resid 205 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 205 and name n) (resid 205 and name ca) (resid 205 and name  c) (resid 206 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 205 and name c) (resid 206 and name  n) (resid 206 and name ca) (resid 206 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi
+assign (resid 206 and name n) (resid 206 and name ca) (resid 206 and name  c) (resid 207 and name n) 5.0  134.95   14.12 2 !unpaired E residue psi
+assign (resid 206 and name c) (resid 207 and name  n) (resid 207 and name ca) (resid 207 and name c) 5.0 -118.91   17.38 2 !unpaired E residue phi

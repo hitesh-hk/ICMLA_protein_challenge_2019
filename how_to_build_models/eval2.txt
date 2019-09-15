@@ -1,0 +1,245 @@
+1a3aA
+TM	RMSD	GDTTS	MODEL
+0.0906	80.43	7.76	./distfold-jobs/output-1a3aA/extended.pdb
+1a6mA
+TM	RMSD	GDTTS	MODEL
+0.0736	87.91	6.95	./distfold-jobs/output-1a6mA/extended.pdb
+1a70A
+TM	RMSD	GDTTS	MODEL
+0.1005	54.32	10.31	./distfold-jobs/output-1a70A/extended.pdb
+1aapA
+TM	RMSD	GDTTS	MODEL
+0.1405	39.61	18.30	./distfold-jobs/output-1aapA/extended.pdb
+0.1847	11.61	29.02	./distfold-jobs/output-1aapA/1aapA_3.pdb
+0.1958	9.70	29.91	./distfold-jobs/output-1aapA/1aapA_2.pdb
+0.2628	8.34	37.95	./distfold-jobs/output-1aapA/1aapA_1.pdb
+1abaA
+TM	RMSD	GDTTS	MODEL
+0.1250	52.47	12.36	./distfold-jobs/output-1abaA/extended.pdb
+1ag6A
+TM	RMSD	GDTTS	MODEL
+0.1030	58.42	10.61	./distfold-jobs/output-1ag6A/extended.pdb
+1aoeA
+TM	RMSD	GDTTS	MODEL
+0.0721	110.70	5.99	./distfold-jobs/output-1aoeA/extended.pdb
+1atlA
+TM	RMSD	GDTTS	MODEL
+0.0746	109.60	5.87	./distfold-jobs/output-1atlA/extended.pdb
+1atzA
+TM	RMSD	GDTTS	MODEL
+0.1257	46.99	14.00	./distfold-jobs/output-1atzA/extended.pdb
+0.2518	9.76	33.67	./distfold-jobs/output-1atzA/1atzA_1.pdb
+1avsA
+TM	RMSD	GDTTS	MODEL
+0.0973	48.17	11.73	./distfold-jobs/output-1avsA/extended.pdb
+0.2164	11.13	28.40	./distfold-jobs/output-1avsA/1avsA_1.pdb
+1bdoA
+TM	RMSD	GDTTS	MODEL
+0.0998	51.71	12.50	./distfold-jobs/output-1bdoA/extended.pdb
+0.2066	17.19	21.25	./distfold-jobs/output-1bdoA/1bdoA_1.pdb
+1bebA
+TM	RMSD	GDTTS	MODEL
+0.0939	89.37	8.01	./distfold-jobs/output-1bebA/extended.pdb
+1behA
+TM	RMSD	GDTTS	MODEL
+0.0782	104.30	6.93	./distfold-jobs/output-1behA/extended.pdb
+1bkrA
+TM	RMSD	GDTTS	MODEL
+0.0887	65.70	9.03	./distfold-jobs/output-1bkrA/extended.pdb
+1brfA
+TM	RMSD	GDTTS	MODEL
+0.1428	36.26	17.45	./distfold-jobs/output-1brfA/extended.pdb
+0.1602	10.95	23.58	./distfold-jobs/output-1brfA/1brfA_2.pdb
+0.1611	10.56	25.47	./distfold-jobs/output-1brfA/1brfA_1.pdb
+1bsgA
+TM	RMSD	GDTTS	MODEL
+0.0600	147.70	4.23	./distfold-jobs/output-1bsgA/extended.pdb
+1c44A
+TM	RMSD	GDTTS	MODEL
+0.0898	67.87	8.74	./distfold-jobs/output-1c44A/extended.pdb
+1c52A
+TM	RMSD	GDTTS	MODEL
+0.0764	73.34	7.63	./distfold-jobs/output-1c52A/extended.pdb
+1c9oA
+TM	RMSD	GDTTS	MODEL
+0.1247	43.70	15.53	./distfold-jobs/output-1c9oA/extended.pdb
+0.1808	10.48	23.48	./distfold-jobs/output-1c9oA/1c9oA_1.pdb
+0.1890	11.00	20.45	./distfold-jobs/output-1c9oA/1c9oA_2.pdb
+0.2326	14.62	26.89	./distfold-jobs/output-1c9oA/1c9oA_3.pdb
+1cc8A
+TM	RMSD	GDTTS	MODEL
+0.1360	46.82	15.28	./distfold-jobs/output-1cc8A/extended.pdb
+0.2157	12.40	28.82	./distfold-jobs/output-1cc8A/1cc8A_1.pdb
+1chdA
+TM	RMSD	GDTTS	MODEL
+0.0712	105.10	5.81	./distfold-jobs/output-1chdA/extended.pdb
+1cjwA
+TM	RMSD	GDTTS	MODEL
+0.0676	92.46	6.63	./distfold-jobs/output-1cjwA/extended.pdb
+1ckeA
+TM	RMSD	GDTTS	MODEL
+0.0682	115.00	5.42	./distfold-jobs/output-1ckeA/extended.pdb
+1ctfA
+TM	RMSD	GDTTS	MODEL
+0.1231	42.60	16.18	./distfold-jobs/output-1ctfA/extended.pdb
+0.2665	11.47	29.41	./distfold-jobs/output-1ctfA/1ctfA_2.pdb
+0.2968	10.85	30.88	./distfold-jobs/output-1ctfA/1ctfA_1.pdb
+0.3207	6.23	44.85	./distfold-jobs/output-1ctfA/1ctfA_4.pdb
+0.3635	5.50	46.69	./distfold-jobs/output-1ctfA/1ctfA_3.pdb
+1cxyA
+TM	RMSD	GDTTS	MODEL
+0.1086	48.85	12.35	./distfold-jobs/output-1cxyA/extended.pdb
+1cznA
+TM	RMSD	GDTTS	MODEL
+0.0745	92.00	6.66	./distfold-jobs/output-1cznA/extended.pdb
+1d0qA
+TM	RMSD	GDTTS	MODEL
+0.0956	61.37	9.80	./distfold-jobs/output-1d0qA/extended.pdb
+1d1qA
+TM	RMSD	GDTTS	MODEL
+0.0794	93.84	7.86	./distfold-jobs/output-1d1qA/extended.pdb
+1d4oA
+TM	RMSD	GDTTS	MODEL
+0.0760	96.59	6.64	./distfold-jobs/output-1d4oA/extended.pdb
+1dbxA
+TM	RMSD	GDTTS	MODEL
+0.0832	85.56	7.40	./distfold-jobs/output-1dbxA/extended.pdb
+1dixA
+TM	RMSD	GDTTS	MODEL
+0.0786	113.30	6.37	./distfold-jobs/output-1dixA/extended.pdb
+1dlwA
+TM	RMSD	GDTTS	MODEL
+0.0949	63.59	9.48	./distfold-jobs/output-1dlwA/extended.pdb
+1dmgA
+TM	RMSD	GDTTS	MODEL
+0.0747	102.80	6.40	./distfold-jobs/output-1dmgA/extended.pdb
+1dqgA
+TM	RMSD	GDTTS	MODEL
+0.0791	79.43	7.65	./distfold-jobs/output-1dqgA/extended.pdb
+1dsxA
+TM	RMSD	GDTTS	MODEL
+0.1016	56.33	10.92	./distfold-jobs/output-1dsxA/extended.pdb
+0.2424	11.10	28.74	./distfold-jobs/output-1dsxA/1dsxA_1.pdb
+1eazA
+TM	RMSD	GDTTS	MODEL
+0.1124	65.09	11.89	./distfold-jobs/output-1eazA/extended.pdb
+1ej0A
+TM	RMSD	GDTTS	MODEL
+0.0755	94.68	6.39	./distfold-jobs/output-1ej0A/extended.pdb
+1ej8A
+TM	RMSD	GDTTS	MODEL
+0.0902	81.64	8.57	./distfold-jobs/output-1ej8A/extended.pdb
+1ek0A
+TM	RMSD	GDTTS	MODEL
+0.0825	96.18	7.44	./distfold-jobs/output-1ek0A/extended.pdb
+1f6bA
+TM	RMSD	GDTTS	MODEL
+0.0808	97.05	6.96	./distfold-jobs/output-1f6bA/extended.pdb
+1fcyA
+TM	RMSD	GDTTS	MODEL
+0.0670	130.50	5.08	./distfold-jobs/output-1fcyA/extended.pdb
+1fk5A
+TM	RMSD	GDTTS	MODEL
+0.0949	50.26	11.02	./distfold-jobs/output-1fk5A/extended.pdb
+1fl0A
+TM	RMSD	GDTTS	MODEL
+0.0881	88.23	8.38	./distfold-jobs/output-1fl0A/extended.pdb
+1fnaA
+TM	RMSD	GDTTS	MODEL
+0.1178	54.92	12.64	./distfold-jobs/output-1fnaA/extended.pdb
+1fqtA
+TM	RMSD	GDTTS	MODEL
+0.1096	62.39	10.78	./distfold-jobs/output-1fqtA/extended.pdb
+1fvgA
+TM	RMSD	GDTTS	MODEL
+0.0694	108.70	6.12	./distfold-jobs/output-1fvgA/extended.pdb
+1fvkA
+TM	RMSD	GDTTS	MODEL
+0.0656	108.20	5.85	./distfold-jobs/output-1fvkA/extended.pdb
+1fx2A
+TM	RMSD	GDTTS	MODEL
+0.0886	62.32	9.82	./distfold-jobs/output-1fx2A/extended.pdb
+1g2rA
+TM	RMSD	GDTTS	MODEL
+0.1269	57.20	11.70	./distfold-jobs/output-1g2rA/extended.pdb
+1g9oA
+TM	RMSD	GDTTS	MODEL
+0.1160	56.81	12.36	./distfold-jobs/output-1g9oA/extended.pdb
+1gbsA
+TM	RMSD	GDTTS	MODEL
+0.0674	105.00	5.54	./distfold-jobs/output-1gbsA/extended.pdb
+1gmiA
+TM	RMSD	GDTTS	MODEL
+0.0905	79.38	9.44	./distfold-jobs/output-1gmiA/extended.pdb
+1gmxA
+TM	RMSD	GDTTS	MODEL
+0.0966	65.67	9.81	./distfold-jobs/output-1gmxA/extended.pdb
+1guuA
+TM	RMSD	GDTTS	MODEL
+0.1075	37.61	15.50	./distfold-jobs/output-1guuA/extended.pdb
+0.2799	7.39	41.50	./distfold-jobs/output-1guuA/1guuA_2.pdb
+0.2834	8.11	41.50	./distfold-jobs/output-1guuA/1guuA_1.pdb
+1gz2A
+TM	RMSD	GDTTS	MODEL
+0.0934	79.78	8.51	./distfold-jobs/output-1gz2A/extended.pdb
+1gzcA
+TM	RMSD	GDTTS	MODEL
+0.0806	130.90	5.96	./distfold-jobs/output-1gzcA/extended.pdb
+1h0pA
+TM	RMSD	GDTTS	MODEL
+0.0735	103.00	6.32	./distfold-jobs/output-1h0pA/extended.pdb
+1h2eA
+TM	RMSD	GDTTS	MODEL
+0.0753	118.70	5.56	./distfold-jobs/output-1h2eA/extended.pdb
+1h4xA
+TM	RMSD	GDTTS	MODEL
+0.0948	63.33	9.32	./distfold-jobs/output-1h4xA/extended.pdb
+1h98A
+TM	RMSD	GDTTS	MODEL
+0.1011	46.63	12.01	./distfold-jobs/output-1h98A/extended.pdb
+1hdoA
+TM	RMSD	GDTTS	MODEL
+0.0726	106.50	6.22	./distfold-jobs/output-1hdoA/extended.pdb
+1hfcA
+TM	RMSD	GDTTS	MODEL
+0.0773	86.68	7.17	./distfold-jobs/output-1hfcA/extended.pdb
+1hh8A
+TM	RMSD	GDTTS	MODEL
+0.0784	109.50	5.73	./distfold-jobs/output-1hh8A/extended.pdb
+1htwA
+TM	RMSD	GDTTS	MODEL
+0.0844	91.78	7.12	./distfold-jobs/output-1htwA/extended.pdb
+1hxnA
+TM	RMSD	GDTTS	MODEL
+0.0685	115.30	5.36	./distfold-jobs/output-1hxnA/extended.pdb
+1i1jA
+TM	RMSD	GDTTS	MODEL
+0.1025	66.80	10.14	./distfold-jobs/output-1i1jA/extended.pdb
+1i1nA
+TM	RMSD	GDTTS	MODEL
+0.0676	113.40	5.58	./distfold-jobs/output-1i1nA/extended.pdb
+1i4jA
+TM	RMSD	GDTTS	MODEL
+0.1061	68.48	10.68	./distfold-jobs/output-1i4jA/extended.pdb
+1i58A
+TM	RMSD	GDTTS	MODEL
+0.0832	102.90	6.88	./distfold-jobs/output-1i58A/extended.pdb
+1i5gA
+TM	RMSD	GDTTS	MODEL
+0.0854	82.33	7.64	./distfold-jobs/output-1i5gA/extended.pdb
+1i71A
+TM	RMSD	GDTTS	MODEL
+0.1059	56.99	13.55	./distfold-jobs/output-1i71A/extended.pdb
+1ihzA
+TM	RMSD	GDTTS	MODEL
+0.1089	77.92	9.56	./distfold-jobs/output-1ihzA/extended.pdb
+1iibA
+TM	RMSD	GDTTS	MODEL
+0.1141	58.67	11.17	./distfold-jobs/output-1iibA/extended.pdb
+1im5A
+TM	RMSD	GDTTS	MODEL
+0.0790	99.60	6.98	./distfold-jobs/output-1im5A/extended.pdb
+1iwdA
+TM	RMSD	GDTTS	MODEL
+0.0677	115.90	5.12	./distfold-jobs/output-1iwdA/extended.pdb
+1j3aA
