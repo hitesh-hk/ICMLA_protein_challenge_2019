@@ -1,24 +1,40 @@
+
+# coding: utf-8
+
+# In[1]:
+
+
+# 4-6-2019
+# Badri Adhikari
+# https://badriadhikari.github.io/
 ################################################################################
 
 import numpy as np
-#import tensorflow as tf
-#from keras.models import *
-#from keras.layers import *
-# from keras.callbacks import *
-# from keras.models import load_model
+import tensorflow as tf
+from keras.models import *
+from keras.layers import *
+from keras.callbacks import *
+from keras.models import load_model
 import datetime
-# import keras.backend as K
-# epsilon = K.epsilon()
-epsilon = 1e-7
+import keras.backend as K
+epsilon = K.epsilon()
 from io import BytesIO, StringIO
 from tensorflow.python.lib.io import file_io
 import argparse
+
+
+# In[2]:
+
 
 ################################################################################
 flag_show_plots = False # True for Notebooks, False otherwise
 if flag_show_plots:
     import matplotlib.pyplot as plt
     from matplotlib.pyplot import figure
+
+
+# In[3]:
+
 
 ################################################################################
 dirlocal = './dataset/'
@@ -31,6 +47,10 @@ es_patience = 32
 if dataset == 'sample':
     max_epochs = 8
     es_patience = 1
+
+
+# In[4]:
+
 
 ################################################################################
 def determine_number_of_channels(input_features, pdb_list, length_dict):
@@ -47,12 +67,19 @@ def determine_number_of_channels(input_features, pdb_list, length_dict):
             sys.exit(1)
     return F
 
+
+# In[5]:
+
+
 ################################################################################
 def print_max_avg_sum_of_each_channel(x):
     print(' Channel        Avg        Max        Sum')
     for i in range(len(x[0, 0, :])):
         (m, s, a) = (x[:, :, i].flatten().max(), x[:, :, i].flatten().sum(), x[:, :, i].flatten().mean())
         print(' %7s %10.4f %10.4f %10.1f' % (i, a, m, s))
+
+
+# In[6]:
 
 
 ################################################################################
@@ -85,6 +112,11 @@ def prepare_input_features_2D(pdbs, input_features, distance_maps_cb, length_dic
         X[i, 0:l, 0:l, :] = xmini[:l, :l, :]
         Y[i, 0:l, 0:l, 0] = y[:l, :l]
     return X, Y
+
+
+# In[7]:
+
+
 ################################################################################
 def plot_input_output_of_this_protein(X, Y):
     figure(num=None, figsize=(16, 16), dpi=80, facecolor='w', frameon=True, edgecolor='k')
@@ -97,6 +129,10 @@ def plot_input_output_of_this_protein(X, Y):
     plt.grid(None)
     plt.imshow(Y[:, :], cmap='Spectral', interpolation='nearest')
     plt.show()
+
+
+# In[8]:
+
 
 ################################################################################
 def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
@@ -155,13 +191,129 @@ def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
     print('Average MAE = %.2f' % (avg_mae / len(PRED[:, 0, 0, 0])))
 
 
+# In[9]:
+
+
+################################################################################
+# # def main(job_dir):
+# job_dir='./'
+# print('job_dir = ',job_dir)
+################################################################################
+# print('')
+# print('Load input features..')
+# x = dirlocal + dataset + '-input-features.npy'
+# if not os.path.isfile(x):
+#     x = BytesIO(file_io.read_file_to_string(dirgcp + dataset + '-input-features.npy', binary_mode=True))
+# (pdb_list, length_dict, input_features) = np.load(x,allow_pickle=True, encoding='latin1')
+
+
+# # In[10]:
+
+
+# len(pdb_list)
+
+
+# # In[11]:
+
+
+# ################################################################################
+# print('')
+# print('Load distance maps..')
+# x = dirlocal + dataset + '-distance-maps-cb.npy'
+# if not os.path.isfile(x):
+#     x = BytesIO(file_io.read_file_to_string(dirgcp + dataset + '-distance-maps-cb.npy', binary_mode=True))
+# (pdb_list_y, distance_maps_cb) = np.load(x, encoding='latin1')
+
+
+# # In[12]:
+
+
+# len(pdb_list_y)
+
+
+# # In[13]:
+
+
+# ################################################################################
+# print('')
+# print ('Some cross checks on data loading..')
+# for pdb in pdb_list:
+#     if not pdb in pdb_list_y:
+#         print ('I/O mismatch ', pdb)
+#         sys.exit(1)
+
+
+# # In[14]:
+
+
+# ################################################################################
+# print('')
+# print('Find the number of input channels..')
+# F = determine_number_of_channels(input_features, pdb_list, length_dict)
+# F
+# ################################################################################
+
+
+# # In[15]:
+
+
+# print('')
+# print('Split into training and validation set (4%)..')
+# split = int(0.20 * len(pdb_list))
+# valid_pdbs = pdb_list[:split]
+# train_pdbs = pdb_list[split:]
+
+# print('Total validation proteins = ', len(valid_pdbs))
+# print('Total training proteins = ', len(train_pdbs))
+
+
+# # In[16]:
+
+
+# ################################################################################
+# print('')
+# print ('Prepare the validation input and outputs..')
+# XVALID, YVALID = prepare_input_features_2D(valid_pdbs, input_features, distance_maps_cb, length_dict, F)
+# print(XVALID.shape)
+# print(YVALID.shape)
+
+# print('')
+# print ('Prepare the training input and outputs..')
+# XTRAIN, YTRAIN = prepare_input_features_2D(train_pdbs, input_features, distance_maps_cb, length_dict, F)
+# print(XTRAIN.shape)
+# print(YTRAIN.shape)
+
+################################################################################
+
+
+# In[17]:
+
+
+# print('')
+# print('Sanity check input features values..')
+# print(' First validation protein:')
+# print_max_avg_sum_of_each_channel(XVALID[0, :, :, :])
+# print(' First traininig protein:')
+# print_max_avg_sum_of_each_channel(XTRAIN[0, :, :, :])
+
+################################################################################
+
+
+# In[18]:
+
+
 def make_new_XTRAIN(X):
     print(X.shape)
     X_new= np.full((X.shape[0], 256, 256, 8), 0.0)
     for i in range(X.shape[0]):
         k=0;
         for j in range(0,10,2):
+#             C=X[i,:,:,j]+X[i,:,:,j+1]
+#             print("C.shape",C.shape)
+            #print(X_new[i,:,].shape)
             X_new[i,:,:,k]=(X[i,:,:,j]/2)+(X[i,:,:,j+1]/2)
+#             print(X_new[i,:,:,k].shape)
+#             print(checkTranspose(X_new[i,:,:,k],X_new[i,:,:,k].T))
             k+=1
         for j in range(10,13):
             X_new[i,:,:,k]=X[i,:,:,j]
@@ -169,16 +321,23 @@ def make_new_XTRAIN(X):
     print(k)
     return X_new
 
+
+# In[19]:
+
+
 x = dirlocal + 'testset-input-features.npy'
 if not os.path.isfile(x):
     x = BytesIO(file_io.read_file_to_string(dirgcp + 'testset-input-features.npy', binary_mode=True))
-(pdb_list, length_dict, sequence_dict, input_features)  = np.load(x,allow_pickle= True)
+(pdb_list, length_dict, sequence_dict, input_features)  = np.load(x)
 x = dirlocal + 'testset-distance-maps-cb.npy'
 if not os.path.isfile(x):
     x = BytesIO(file_io.read_file_to_string(dirgcp + 'testset-distance-maps-cb.npy', binary_mode=True))
-(pdb_list_y, distance_maps_cb) = np.load(x,allow_pickle= True)
+(pdb_list_y, distance_maps_cb) = np.load(x)
 F = determine_number_of_channels(input_features, pdb_list, length_dict)
 XTEST, YTEST = prepare_input_features_2D(pdb_list, input_features, distance_maps_cb, length_dict, F)
+
+
+# In[20]:
 
 
 for pdb in length_dict:
@@ -186,11 +345,91 @@ for pdb in length_dict:
         length_dict[pdb] = 256
 
 
+# In[21]:
+
+
 length_dict[pdb_list[1]]
+
+
+# In[22]:
+
+
 len(pdb_list)==len(pdb_list_y)==len(length_dict)
+
+
+# In[23]:
+
+
 print(XTEST.shape)
+
+
+# In[24]:
+
+
 XTEST=make_new_XTRAIN(XTEST)
+
+
+# In[25]:
+
+
 print(XTEST.shape)
+
+
+# In[26]:
+
+
+# XTEST = np.log(XTEST+10E-5)
+
+
+# In[27]:
+
+
+# xtrain_mean,xtrain_max,ytrain_mean,ytrain_max= np.load('LOG_mean_max_train.npy')
+
+
+# In[28]:
+
+
+# xtrain_mean
+
+
+# In[29]:
+
+
+# XTEST = (XTEST- xtrain_mean)/xtrain_max
+
+
+# In[30]:
+
+
+# np.save('LOG_XTEST_channels_8_torch',XTEST)
+
+
+# In[31]:
+
+
+# YTEST = np.log(YTEST+10E-5)
+
+
+# In[32]:
+
+
+# YTEST = (YTEST- ytrain_mean)/ytrain_max
+
+
+# In[33]:
+
+
+# np.save('LOG_YTEST_channels_8_torch',YTEST)
+
+
+# In[34]:
+
+
+# np.save('test_pdb_list',pdb_list), np.save('test_length_dict',length_dict), np.save('test_sequence_dict',sequence_dict)
+
+
+# In[35]:
 
 
 import torch
@@ -202,20 +441,19 @@ from torch.autograd import Variable
 # from build_model import *
 import os
 from tqdm import tqdm
-#from tensorboardX import SummaryWriter
+from tensorboardX import SummaryWriter
 from torch.optim.lr_scheduler import MultiStepLR
-from dataloader_un import npy_train,npy_valid,npy_test
-# from resnet_unet18_1 import ResNetUNet
-from model import UNet11
-# import keras.backend as K
-# epsilon = K.epsilon()
-epsilon = 1e-7
+from dataloader import npy_train,npy_valid,npy_test
+from resnet_unet18_1 import ResNetUNet
+from VG11unet_model_with_sigmoid import UNet11
+import keras.backend as K
+epsilon = K.epsilon()
 import numpy as np
 from io import BytesIO, StringIO
-# from tensorflow.python.lib.io import file_io
+from tensorflow.python.lib.io import file_io
 #from Transforms import *
 from build_unetmodel import UNet
-# os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 # #--------------------------
 
 class Average(object):
@@ -271,11 +509,17 @@ class symmetry_mse(nn.Module):
         
     def forward(self, y_pred):
     
+        # print('sym_mse started')
         train_loss1 = F.mse_loss(y_pred, y_pred.permute(0,1,3,2), True)
+        # print('sym_mse calculated')
         return train_loss1
+
+
+# In[36]:
+
+
 #--------------
 DATA_DIR='/home/SSD/protien_ICMLA/'
-
 LOGGING = False
 BATCH_SIZE = 1  
 NUM_EPOCHS = 1
@@ -286,7 +530,7 @@ WEIGHT_DECAY = 0.01
 MODEL = 'unet'
 phase = 'test'
 SUMMARY_NAME = 'PROTIEN'+'_'+str(BATCH_SIZE)+'_'+str(LEARNING_RATE)+'_'+str(LEARNING_RATE_DECAY)+'_'+str(WEIGHT_DECAY)+'_'+str(MODEL)+'_'+str(phase)+"_restart_497_N"
-# writer = SummaryWriter('./runs/'+SUMMARY_NAME)
+writer = SummaryWriter('./runs/'+SUMMARY_NAME)
 
 #######################LOGGING######################
 if LOGGING:
@@ -309,6 +553,9 @@ def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
         L = length_dict[pdb_list[i]]
         if(L>256):
             L=256
+        # print("len-----------------------",L )
+        # continue
+        # exit()
         P = np.zeros((L, L))
         # Average the predictions from both triangles (optional)
         # This can improve MAE by upto 6% reduction
@@ -358,6 +605,10 @@ def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
             plt.show()
     print('Average MAE = %.2f' % (avg_mae / len(PRED[:, 0, 0, 0])))
 
+
+# In[37]:
+
+
 #--------------
 DATA_DIR='/home/SSD/protien_ICMLA/'
 LOGGING = False
@@ -370,7 +621,7 @@ WEIGHT_DECAY = 0.01
 MODEL = 'unet'
 phase = 'test'
 SUMMARY_NAME = 'PROTIEN'+'_'+str(BATCH_SIZE)+'_'+str(LEARNING_RATE)+'_'+str(LEARNING_RATE_DECAY)+'_'+str(WEIGHT_DECAY)+'_'+str(MODEL)+'_'+str(phase)+"_check_restart_497_N"
-# writer = SummaryWriter('./runs/'+SUMMARY_NAME)
+writer = SummaryWriter('./runs/'+SUMMARY_NAME)
 
 #######################LOGGING######################
 if LOGGING:
@@ -393,11 +644,15 @@ def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
         L = length_dict[pdb_list[i]]
         if(L>256):
             L=256
+        # print("len-----------------------",L )
+        # continue
+        # exit()
         P = np.zeros((L, L))
         # Average the predictions from both triangles (optional)
         # This can improve MAE by upto 6% reduction
         for j in range(0, L):
             for k in range(0, L):
+                #print(i,j,k)
                 P[k, j] = (PRED[i, k, j, 0] + PRED[i, j, k, 0]) / 2.0
         Y = np.copy(YTRUE[i, 0:L, 0:L, 0])
         for j in range(0, L):
@@ -441,6 +696,10 @@ def calculate_mae(PRED, YTRUE, pdb_list, length_dict):
             plt.show()
     print('Average MAE = %.2f' % (avg_mae / len(PRED[:, 0, 0, 0])))
 
+
+# In[38]:
+
+
 ################################################################################
 def calculate_longrange_contact_precision(PRED, YTRUE, pdb_list, length_dict):
     if flag_show_plots:
@@ -472,6 +731,7 @@ def calculate_longrange_contact_precision(PRED, YTRUE, pdb_list, length_dict):
                 else:
                     Y[j, k] = 0
         matches = np.logical_and(P, Y).sum()
+        # print('matches',matches)
         precision = matches / (Y.sum() + epsilon)
         avg_precision += precision
         print('Precision for ' + str(i) + ' - ' + str(pdb_list[i]) +  ' ' + str(L) + ' [' + str(matches) + '/' + str(Y.sum()) + '] = %.2f ' % precision)
@@ -490,10 +750,12 @@ def calculate_longrange_contact_precision(PRED, YTRUE, pdb_list, length_dict):
 
 ########################################3
 
-XTEST = np.load('./XTEST_channels_8_torch.npy')
-YTEST = np.load('./YTEST_channels_8_torch.npy')
+XTEST = np.load('XTEST_channels_8_torch.npy')
+YTEST = np.load('YTEST_channels_8_torch.npy')
 print(XTEST.shape)
 print(YTEST.shape)
+# XTEST = np.transpose(XTEST,(0,2,3,1))
+# YTEST = np.transpose(YTEST,(0,2,3,1))
 print(XTEST.shape)
 print(YTEST.shape)
 print(XTEST[0].shape)
@@ -502,7 +764,18 @@ print(XTEST[0].reshape(1,256,256,8).shape)
 
 length_dict[pdb_list[1]]
 
-def test():
+
+# In[39]:
+
+
+# pdb_list = np.load('test_pdb_list.npy')
+# length_dict = np.load('test_length_dict.npy')
+# sequence_dict = np.load('test_sequence_dict.npy')
+
+
+
+
+def test(s_wt):
     cuda = torch.cuda.is_available()
     predict_test_y_mae=[]
     predict_test_y_pre=[]
@@ -514,14 +787,13 @@ def test():
     if cuda:
         net = net.cuda()
     #-------------------------------------
-    net.load_state_dict(torch.load('./PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_96.pth'))
+    
+    #net.load_state_dict(torch.load('/home/SSD/protien_ICMLA/weights/PROTIEN_24_0.001_0.8_0.01_vgg11_dilation_4_un_normalized_UNorm_99_69_recent.pth'))
+    net.load_state_dict(torch.load('/home/SSD/protien_ICMLA/weights2/PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_96.pth'))
     #-------------------------
-    # criterion1 = mse().cuda()
-    # criterion2 = mae().cuda()
-    # criterion3 = symmetry_mse().cuda()
-    criterion1 = mse()
-    criterion2 = mae()
-    criterion3 = symmetry_mse()
+    criterion1 = mse().cuda()
+    criterion2 = mae().cuda()
+    criterion3 = symmetry_mse().cuda()
     #-------------------------------
     optimizer = torch.optim.Adam(net.parameters(), lr=LEARNING_RATE,weight_decay = WEIGHT_DECAY)
     scheduler = MultiStepLR(optimizer, milestones=[5,25,75,125,200], gamma=LEARNING_RATE_DECAY)
@@ -531,17 +803,17 @@ def test():
 
     test_iter_count = 150 #length of test samples    
 
-    # ------ Test -------
+    # ------ train -------
     for epoch in tqdm(range(NUM_EPOCHS)):
          
-        # ######################Testing###########
+        # ######################Validation###########
         
         val_loss1 = Average()
         val_loss2 = Average()
         val_loss3 = Average()
         val_loss = Average()
         net.eval()
-        print("starting Testing")
+        print("starting validation")
         for i in range(150):
             images_val = Variable(torch.Tensor(np.expand_dims(XTEST[i],axis=0)).float())
             masks_val = Variable(torch.Tensor(np.expand_dims(YTEST[i],axis=0)).float())
@@ -549,7 +821,7 @@ def test():
                 images_val = images_val.cuda()
                 masks_val = masks_val.cuda()
             
-            # print(images_val.size())
+            print(images_val.size())
 
             outputs = net(images_val)
 
@@ -559,16 +831,21 @@ def test():
                 ytrue_test_y.extend(masks_val.data.cpu().numpy())
 
 
-    # print('Length of predict_test_y',len(predict_test_y_mae))
+    print('Length of predict_test_y',len(predict_test_y_mae))
     np.save("upload_pred_test_mae",np.array(predict_test_y_mae))
     np.save("upload_pred_test_pre",np.array(predict_test_y_pre))
-    # print('Length of true_test_y',len(ytrue_test_y))
+
+    # print(predict_test_y.shape)
+    # print(np.amax(predict_test_y),np.amin(predict_test_y))
+    print('Length of true_test_y',len(ytrue_test_y))
     np.save("upload_true_test",np.array(ytrue_test_y))
+    # print(ytrue_test_y.shape)    
     return net
 
 if __name__ == "__main__":
     print("I am in test")
-    test()
+    wt='/home/SSD/protien_ICMLA/weights2/PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_427.pth'
+    test(wt)
     print('')
     Q_pre = np.load('upload_pred_test_pre.npy')
     
@@ -576,14 +853,25 @@ if __name__ == "__main__":
 
     Q_mae=np.load('upload_pred_test_mae.npy')
     P_mae=torch.Tensor(Q_mae).permute(0,2,3,1)
+
+    #print("new shape",P.shape)
     YTEST=np.load('upload_true_test.npy')
     YTEST_GT=torch.Tensor(YTEST).permute(0,2,3,1)
-    # print('YTEST_last',YTEST_GT.size())
-    # print('PredTEST_last_mae',P_mae.size())
-    # print('Pred_pre',P_pre.size())
+    print('YTEST_last',YTEST_GT.size())
+    print('PredTEST_last_mae',P_mae.size())
+    print('Pred_pre',P_pre.size())
+    # t=np.load('./LOG_mean_max_train.npy')
+
     print('MAE of top L long-range distance predictions on the test set..')
+    #print("After iteration",i)
+    # calculate_mae(P*ytrain_max+ytrain_mean, torch.Tensor(YTEST).permute(0,2,3,1)*ytrain_max+ytrain_mean, pdb_list, length_dict)
     calculate_mae(P_mae, YTEST_GT, pdb_list, length_dict)
+    # calculate_mae(np.exp(P*t[3]+t[2]), np.exp(YTEST*t[3]+t[2]), pdb_list, length_dict)
+
     print('')
+    #print("After iteration:",i)
     print('Precision of top L long-range distance predictions on the test set..')
+    # calculate_longrange_contact_precision(P*ytrain_max+ytrain_mean, torch.Tensor(YTEST).permute(0,2,3,1)*ytrain_max+ytrain_mean, pdb_list, length_dict)
     calculate_longrange_contact_precision(P_pre, YTEST_GT, pdb_list, length_dict)
+    # calculate_longrange_contact_precision(np.exp(P*t[3]+t[2]), np.exp(YTEST*t[3]+t[2]), pdb_list, length_dict)
 
