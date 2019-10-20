@@ -8,7 +8,8 @@
 # Badri Adhikari
 # https://badriadhikari.github.io/
 ################################################################################
-
+import time
+t1= time.time()
 import numpy as np
 import tensorflow as tf
 from keras.models import *
@@ -875,3 +876,5 @@ if __name__ == "__main__":
     calculate_longrange_contact_precision(P_pre, YTEST_GT, pdb_list, length_dict)
     # calculate_longrange_contact_precision(np.exp(P*t[3]+t[2]), np.exp(YTEST*t[3]+t[2]), pdb_list, length_dict)
 
+t2 = time.time()
+print(t2-t1)
