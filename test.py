@@ -751,8 +751,8 @@ def calculate_longrange_contact_precision(PRED, YTRUE, pdb_list, length_dict):
 
 ########################################3
 
-XTEST = np.load('XTEST_channels_8_torch.npy')
-YTEST = np.load('YTEST_channels_8_torch.npy')
+XTEST = np.load('XTEST_channels_8_torch_10.npy')
+YTEST = np.load('YTEST_channels_8_torch_10.npy')
 print(XTEST.shape)
 print(YTEST.shape)
 # XTEST = np.transpose(XTEST,(0,2,3,1))
@@ -802,7 +802,7 @@ def test(s_wt):
     print("preparing testing data ...")
 
 
-    test_iter_count = 150 #length of test samples    
+    test_iter_count = 10 #length of test samples    
 
     # ------ train -------
     for epoch in tqdm(range(NUM_EPOCHS)):
@@ -815,7 +815,7 @@ def test(s_wt):
         val_loss = Average()
         net.eval()
         print("starting validation")
-        for i in range(150):
+        for i in range(10):
             images_val = Variable(torch.Tensor(np.expand_dims(XTEST[i],axis=0)).float())
             masks_val = Variable(torch.Tensor(np.expand_dims(YTEST[i],axis=0)).float())
             if cuda:
@@ -845,7 +845,7 @@ def test(s_wt):
 
 if __name__ == "__main__":
     print("I am in test")
-    wt='/home/SSD/protien_ICMLA/weights2/PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_427.pth'
+    wt='PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_427.pth'
     test(wt)
     print('')
     Q_pre = np.load('upload_pred_test_pre.npy')
