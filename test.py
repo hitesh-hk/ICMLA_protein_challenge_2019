@@ -1,16 +1,17 @@
 ################################################################################
 
 import numpy as np
-import tensorflow as tf
-from keras.models import *
-from keras.layers import *
-from keras.callbacks import *
-from keras.models import load_model
+#import tensorflow as tf
+#from keras.models import *
+#from keras.layers import *
+# from keras.callbacks import *
+# from keras.models import load_model
 import datetime
-import keras.backend as K
-epsilon = K.epsilon()
+# import keras.backend as K
+# epsilon = K.epsilon()
+epsilon = 1e-7
 from io import BytesIO, StringIO
-from tensorflow.python.lib.io import file_io
+# from tensorflow.python.lib.io import file_io
 import argparse
 
 ################################################################################
@@ -201,19 +202,20 @@ from torch.autograd import Variable
 # from build_model import *
 import os
 from tqdm import tqdm
-from tensorboardX import SummaryWriter
+#from tensorboardX import SummaryWriter
 from torch.optim.lr_scheduler import MultiStepLR
 from dataloader_un import npy_train,npy_valid,npy_test
 # from resnet_unet18_1 import ResNetUNet
 from model import UNet11
-import keras.backend as K
-epsilon = K.epsilon()
+# import keras.backend as K
+# epsilon = K.epsilon()
+epsilon = 1e-7
 import numpy as np
 from io import BytesIO, StringIO
-from tensorflow.python.lib.io import file_io
+# from tensorflow.python.lib.io import file_io
 #from Transforms import *
 from build_unetmodel import UNet
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+# os.environ["CUDA_VISIBLE_DEVICES"]="0"
 # #--------------------------
 
 class Average(object):
@@ -273,6 +275,7 @@ class symmetry_mse(nn.Module):
         return train_loss1
 #--------------
 DATA_DIR='/home/SSD/protien_ICMLA/'
+
 LOGGING = False
 BATCH_SIZE = 1  
 NUM_EPOCHS = 1
@@ -283,7 +286,7 @@ WEIGHT_DECAY = 0.01
 MODEL = 'unet'
 phase = 'test'
 SUMMARY_NAME = 'PROTIEN'+'_'+str(BATCH_SIZE)+'_'+str(LEARNING_RATE)+'_'+str(LEARNING_RATE_DECAY)+'_'+str(WEIGHT_DECAY)+'_'+str(MODEL)+'_'+str(phase)+"_restart_497_N"
-writer = SummaryWriter('./runs/'+SUMMARY_NAME)
+# writer = SummaryWriter('./runs/'+SUMMARY_NAME)
 
 #######################LOGGING######################
 if LOGGING:
@@ -367,7 +370,7 @@ WEIGHT_DECAY = 0.01
 MODEL = 'unet'
 phase = 'test'
 SUMMARY_NAME = 'PROTIEN'+'_'+str(BATCH_SIZE)+'_'+str(LEARNING_RATE)+'_'+str(LEARNING_RATE_DECAY)+'_'+str(WEIGHT_DECAY)+'_'+str(MODEL)+'_'+str(phase)+"_check_restart_497_N"
-writer = SummaryWriter('./runs/'+SUMMARY_NAME)
+# writer = SummaryWriter('./runs/'+SUMMARY_NAME)
 
 #######################LOGGING######################
 if LOGGING:
@@ -513,9 +516,12 @@ def test():
     #-------------------------------------
     net.load_state_dict(torch.load('./PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_96.pth'))
     #-------------------------
-    criterion1 = mse().cuda()
-    criterion2 = mae().cuda()
-    criterion3 = symmetry_mse().cuda()
+    # criterion1 = mse().cuda()
+    # criterion2 = mae().cuda()
+    # criterion3 = symmetry_mse().cuda()
+    criterion1 = mse()
+    criterion2 = mae()
+    criterion3 = symmetry_mse()
     #-------------------------------
     optimizer = torch.optim.Adam(net.parameters(), lr=LEARNING_RATE,weight_decay = WEIGHT_DECAY)
     scheduler = MultiStepLR(optimizer, milestones=[5,25,75,125,200], gamma=LEARNING_RATE_DECAY)
