@@ -790,7 +790,7 @@ def test(s_wt):
     #-------------------------------------
     
     #net.load_state_dict(torch.load('/home/SSD/protien_ICMLA/weights/PROTIEN_24_0.001_0.8_0.01_vgg11_dilation_4_un_normalized_UNorm_99_69_recent.pth'))
-    net.load_state_dict(torch.load('./PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_96.pth'))
+    net.load_state_dict(torch.load('./PROTIEN_16_0.001_0.8_0.01_vgg11_dilation_normalized_UNorm_CEloss_96.pth',map_location='cpu'))
     #-------------------------
     criterion1 = mse().cuda()
     criterion2 = mae().cuda()
