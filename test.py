@@ -444,9 +444,9 @@ import os
 from tqdm import tqdm
 from tensorboardX import SummaryWriter
 from torch.optim.lr_scheduler import MultiStepLR
-from dataloader import npy_train,npy_valid,npy_test
-from resnet_unet18_1 import ResNetUNet
-from VG11unet_model_with_sigmoid import UNet11
+from dataloader_un import npy_train,npy_valid,npy_test
+# from resnet_unet18_1 import ResNetUNet
+from model import UNet11
 # import keras.backend as K
 # epsilon = K.epsilon()
 import numpy as np
