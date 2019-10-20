@@ -329,11 +329,11 @@ def make_new_XTRAIN(X):
 x = dirlocal + 'testset-input-features.npy'
 if not os.path.isfile(x):
     x = BytesIO(file_io.read_file_to_string(dirgcp + 'testset-input-features.npy', binary_mode=True))
-(pdb_list, length_dict, sequence_dict, input_features)  = np.load(x)
+(pdb_list, length_dict, sequence_dict, input_features)  = np.load(x,allow_pickle= True)
 x = dirlocal + 'testset-distance-maps-cb.npy'
 if not os.path.isfile(x):
     x = BytesIO(file_io.read_file_to_string(dirgcp + 'testset-distance-maps-cb.npy', binary_mode=True))
-(pdb_list_y, distance_maps_cb) = np.load(x)
+(pdb_list_y, distance_maps_cb) = np.load(x,allow_pickle=True)
 F = determine_number_of_channels(input_features, pdb_list, length_dict)
 XTEST, YTEST = prepare_input_features_2D(pdb_list, input_features, distance_maps_cb, length_dict, F)
 
