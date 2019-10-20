@@ -12,13 +12,13 @@ import time
 t1= time.time()
 import numpy as np
 import tensorflow as tf
-from keras.models import *
-from keras.layers import *
-from keras.callbacks import *
-from keras.models import load_model
+# from keras.models import *
+# from keras.layers import *
+# from keras.callbacks import *
+# from keras.models import load_model
 import datetime
-import keras.backend as K
-epsilon = K.epsilon()
+# import keras.backend as K
+epsilon = 1e-7
 from io import BytesIO, StringIO
 from tensorflow.python.lib.io import file_io
 import argparse
@@ -447,8 +447,8 @@ from torch.optim.lr_scheduler import MultiStepLR
 from dataloader import npy_train,npy_valid,npy_test
 from resnet_unet18_1 import ResNetUNet
 from VG11unet_model_with_sigmoid import UNet11
-import keras.backend as K
-epsilon = K.epsilon()
+# import keras.backend as K
+# epsilon = K.epsilon()
 import numpy as np
 from io import BytesIO, StringIO
 from tensorflow.python.lib.io import file_io
